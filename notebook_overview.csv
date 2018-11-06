@@ -1,3 +1,1 @@
 Notebook name	location	required prior knowledge	dealing with
-GIS_pyshp	Excercise_notebooks\On_topic\06_GIS\GIS_pyshp.ipynb	"basic GIS, read and write text files"	"pyshp, shapefiles, "
-Iotextfiles	Excercise_notebooks\On_topic\07_read_write_text_files\IOtextfiles.ipynb	"pandas dataframe, numpy arrays"	"open with, read, write, loadtxt, pandas.read_csv"
