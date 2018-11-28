@@ -1,0 +1,9 @@
+         0    -1E+30         0     0.100         1         0
+1 3 
+CONSTANT    1.000000E+00                           #anisotropy factor             
+CONSTANT    1.500000E-01                           #primary storage coefficient layer 1
+CONSTANT    1.000000E+01                           #horizontal hydraulic conductivity layer 1
+CONSTANT    1.000000E-04                           #vertical conductance layer 1  
+CONSTANT    1.500000E-01                           #primary storage coefficient layer 2
+CONSTANT    1.000000E+01                           #horizontal hydraulic conductivity layer 2
+CONSTANT    1.500000E-01                           #secondary storage coefficient layer 2
