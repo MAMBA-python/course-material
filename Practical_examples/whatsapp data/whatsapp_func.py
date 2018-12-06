@@ -6,7 +6,7 @@ import numpy as np
 import zipfile
 
 
-def read_whatsapp(whatsapp_file):
+def read_whatsapp(whatsapp_file, pattern=None, ):
     """
     read a whatsapp data file into a pandas dataframe
 
@@ -14,6 +14,9 @@ def read_whatsapp(whatsapp_file):
     ----------
     whatsapp_file: str
         path of the exported data from Whatsapp, can be a .zip or .txt file
+
+    pattern: _sre.SRE_Pattern
+        a compiled regular expression used to find the date format
 
     Returns
     -------
@@ -27,8 +30,10 @@ def read_whatsapp(whatsapp_file):
         whatsapp_txt = whatsapp_file
 
     # define regulare expressions
-    pattern = re.compile('(\[\d\d\/\d\d\/\d\d\d\d, \d\d:\d\d:\d\d\])\s+(.+)')
-    group_pattern = 'Messages to this group are now secured with end-to-end encryption'
+    pattern_en = re.compile('(\[\d\d\/\d\d\/\d\d\d\d, \d\d:\d\d:\d\d\])\s+(.+)')
+    pattern_nl = re.compile('(\[\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\])\s+(.+)')
+    group_pattern_en = 'Messages to this group are now secured with end-to-end encryption'
+    group_pattern_nl = 'Berichten en oproepen in deze chat zijn nu beveiligd met end-to-end encryptie'
 
     # find usernames
     user_names = []
@@ -37,7 +42,15 @@ def read_whatsapp(whatsapp_file):
     text_list = []
     with open(whatsapp_txt, 'r', encoding="utf8") as fo:
         line = fo.readline()
-        if group_pattern in line:
+        if group_pattern_en in line:
+            pattern = re.compile('(\[\d\d\/\d\d\/\d\d\d\d, \d\d:\d\d:\d\d\])\s+(.+)')
+            print('recognised English file format')
+            for i in range(2):
+                fo.readline()
+
+        elif group_pattern_nl in line:
+            pattern = re.compile('(\[\d\d\-\d\d\-\d\d \d\d:\d\d:\d\d\])\s+(.+)')
+            print('recognised Dutch file format')
             for i in range(2):
                 fo.readline()
 
