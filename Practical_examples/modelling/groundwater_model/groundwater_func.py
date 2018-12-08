@@ -83,6 +83,7 @@ def add_recharge_knmi(ml, start_date=None, end_date=None, recharge_stn=344,
 
     return ml
 
+
 def plot_2d_transmissivity(ml):
     """
 
@@ -154,7 +155,7 @@ def create_plot_series(ml, output_loc=(0, 0, 0), animation_frequency='H', yearle
     create series from model results that can be used to plot
 
     Parameters
-    ----------
+    ----------ty
     ml: floyp.modflow.mf.Modflow
         handle for the modflow model
 
@@ -338,6 +339,7 @@ def animate_multiple_gw_rch(ml_list, animation_name, output_loc=(0, 0, 0), anima
         return line_list
 
     # set change for each frame
+
 
     def run(i, plot_ts_list, len_plot_ts_list):
 
