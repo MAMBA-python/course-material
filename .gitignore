@@ -3,4 +3,5 @@ Practical_examples/data_analysis/whatsapp data/data/WhatsApp Chat - Ich mo¨chte 
 Practical_examples/data_analysis/whatsapp data/data/WhatsApp Chat - xxx xxx.zip
 Practical_examples/data_analysis/groundwater_model/model
 Practical_examples/modelling/groundwater_model/results/*	
+!Practical_examples/modelling/groundwater_model/results/.gitkeep
 **/*.ipynb_checkpoints/
