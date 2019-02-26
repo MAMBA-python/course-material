@@ -2,8 +2,9 @@
 This folder contains the material used in the Python Programming course given by MAMBA (www.mamba-python.nl). 
 
 The philosophy of this course is that the best way to learn Python is by solving practical problems. A good way to do this is by doing exercises in Jupyter Notebooks. The exercises for this are in the 'Exercise_notebooks' folder. 'Excercise_notebooks' contains the exercise material in which the folder:
-- 'basic' is used for the most basic material that everyone learning Python should know;
+- 'basic' is used for the most basic material that everyone learning Python should know.
 - 'on-topic' is used for exercise on specific topics, that you should only use if you're interested in the topic.
+- 'personal_application' contains instructions to write a personal application. This is used in the Python course.
 
 Besides the exercises that are also some examples of Python code in the 'Practical_examples' folder. These are mostly examples that are shown during the Python courses.
 
