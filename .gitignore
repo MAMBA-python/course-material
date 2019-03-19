@@ -4,3 +4,5 @@ Practical_examples/modelling/groundwater_model/results/*
 !Practical_examples/modelling/groundwater_model/results/.gitkeep
 .ipynb_checkpoints
 **/*.ipynb_checkpoints/
+
+.vscode
