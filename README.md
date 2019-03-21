@@ -10,7 +10,7 @@ Besides the exercises that are also some examples of Python code in the 'Practic
 
 
 ## Acknowledgements
-This repository consists for 90% of notebooks created by others (with an open source license). The repositories from which material is used are:
+This repository consists for 90% of notebooks created by others. We are incredibly grateful to the individuals, communities and firms that allow us to use their material. The repositories from which material is used are:
 - [Exploratory Computing with Python, Mark Bakker, Delft University of Technology](https://mbakker7.github.io/exploratory_computing_with_python)
 - [Learn Python 3 through Jupyter Notebooks, Jerry Pussinen](https://github.com/jerry-git/learn-python3)
 - [Python for non-programmers, Berkeley University](https://github.com/BIDS/2016-01-14-berkeley)
