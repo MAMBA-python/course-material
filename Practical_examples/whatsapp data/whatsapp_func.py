@@ -5,22 +5,39 @@ import numpy as np
 import zipfile
 
 
-
 def strftime_to_re_pattern(strftime_format):
+    """infer the regular expression pattern of a strftime format string
+
+    Parameters
+    ----------
+    strftime_format: str
+        string with the strftime format of the whatsapp file
+
+    Returns
+    -------
+    re_pattern: str
+        regular expression pattern
+
+    """
     re_pattern = strftime_format.replace('%d', '\\d\\d')
-    re_pattern = re_pattern.replace('%m', '\\d\\d')
-    re_pattern = re_pattern.replace('%Y', '\\d\\d\\d\\d')
-    re_pattern = re_pattern.replace('%H', '\\d\\d')
-    re_pattern = re_pattern.replace('%M', '\\d\\d')
-    re_pattern = re_pattern.replace('%S', '\\d\\d')
+
     re_pattern = re_pattern.replace('/', '\\/')
     re_pattern = re_pattern.replace('[', '\\[')
     re_pattern = re_pattern.replace(']', '\\]')
+
+    re_pattern = re_pattern.replace('%m', '\\d\\d')
+    re_pattern = re_pattern.replace('%b', '[A-Z][a-z]{2}')
+    re_pattern = re_pattern.replace('%Y', '\\d\\d\\d\\d')
+    re_pattern = re_pattern.replace('%y', '\\d\\d')
+    re_pattern = re_pattern.replace('%H', '\\d\\d')
+    re_pattern = re_pattern.replace('%M', '\\d\\d')
+    re_pattern = re_pattern.replace('%S', '\\d\\d')
+
     re_pattern = '(' + re_pattern + ')'
 
     return re_pattern
 
-def read_whatsapp(whatsapp_file, datetime_pattern = '(\[\d\d\/\d\d\/\d\d\d\d, \d\d:\d\d:\d\d\])',
+def read_whatsapp(whatsapp_file, datetime_pattern = None,
                   user_sep=':', strftime_format = '[%d/%m/%Y, %H:%M:%S]',
                   encoding="utf8"):
     """
@@ -30,6 +47,14 @@ def read_whatsapp(whatsapp_file, datetime_pattern = '(\[\d\d\/\d\d\/\d\d\d\d, \d
     ----------
     whatsapp_file: str
         path of the exported data from Whatsapp, can be a .zip or .txt file
+    datetime_pattern: str, optional
+        regular expression to recognize datetime, if None datetime_pattern is inferred from strftime_format
+    user_sep: str, optional
+        the character between the user and the message in the whatsapp file
+    strftime_format: str, optional
+        the format of the date in the whatsapp file
+    encoding: str, optional
+        encoding of the whatsapp txt file
 
     Returns
     -------
@@ -45,17 +70,34 @@ def read_whatsapp(whatsapp_file, datetime_pattern = '(\[\d\d\/\d\d\/\d\d\d\d, \d
     else:
         raise FileNotFoundError('could not open file: %s'%whatsapp_file)
 
+    if datetime_pattern is None:
+        datetime_pattern = strftime_to_re_pattern(strftime_format)
+
     re_datetime = re.compile(datetime_pattern)
     datetimeuser_pattern = datetime_pattern + '(.*?)' + user_sep
     re_datetimeuser = re.compile(datetimeuser_pattern)
 
     with open(whatsapp_txt, 'r', encoding=encoding) as fo:
         line = fo.readline()
-        check_date_pattern(line, re_datetime)
-        check_date_user_pattern(line, re_datetimeuser)
 
-        re_datetimeuser.split(line)
+        # filter weird intro line (without a user)
+        intro_line = True
+        counter = 0
+        while intro_line + (counter < 5) == 2:
+            try:
+                check_date_pattern(line, re_datetime)
+                check_date_user_pattern(line, re_datetimeuser)
+                intro_line = False
+            except ValueError:
+                line = fo.readline()
+            counter += 1
 
+        # print error if patterns are not recognized
+        if counter == 5:
+            check_date_pattern(line, re_datetime)
+            check_date_user_pattern(line, re_datetimeuser)
+
+        # read intro lines
         empty, date, user, message = re_datetimeuser.split(line)
         datetime_list = [date]
         user_list = [user]
@@ -83,6 +125,19 @@ def read_whatsapp(whatsapp_file, datetime_pattern = '(\[\d\d\/\d\d\/\d\d\d\d, \d
 
 
 def check_date_pattern(line, re_datetime):
+    """ Checks if the date pattern can be recognized in a string. If not a ValueError is raised.
+
+    Parameters
+    ----------
+    line: str
+        line to check date pattern in
+    re_datetime: _sre.SRE_Pattern
+        datetime pattern as a compiled regular expression
+
+    Returns
+    -------
+
+    """
     if re_datetime.search(line):
         print('date pattern recognized')
     else:
@@ -90,6 +145,19 @@ def check_date_pattern(line, re_datetime):
 
 
 def check_date_user_pattern(line, re_datetimeuser):
+    """ Checks if the date user pattern can be recognized in a string. If not a ValueError is raised.
+
+    Parameters
+    ----------
+    line: str
+        line to check date pattern in
+    re_datetimeuser: _sre.SRE_Pattern
+        datetimeuser pattern as a compiled regular expression
+
+    Returns
+    -------
+
+    """
     if re_datetimeuser.search(line):
         print('user separator recognized')
     else:
@@ -102,7 +170,8 @@ def check_anonymized_dataset(time_user_df):
 
     Parameters
     ----------
-    time_user_df
+    time_user_df: pandas.DataFrame
+        dataframe with the whatsapp data
 
     Returns
     -------
