@@ -8,10 +8,11 @@ import pytest
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     '02_strings_exercise.ipynb', '03_lists_exercise.ipynb',
                     '04_dictionaries_exercise.ipynb', '01_recap1_exercise.ipynb',
-                    '01_Data inlezen met Pandas.ipynb'
+                    '01_Data inlezen met Pandas.ipynb', 
+                    '01_functions_exercise.ipynb', 
                     ]
 
-def get_exercise_notebooks(exercise_nb_dir):
+def get_notebooks(exercise_nb_dir):
     """
     These are the notebooks that should be saved without output
     
@@ -59,26 +60,25 @@ def run_notebook(fname):
         ep.preprocess(nb, {'metadata': {'path': os.path.split(fname)[0]}})
         msg = 'succesfully executed the notebook %s' %fname
         print(msg)
+        
+        return True
     except CellExecutionError:
-        raise RuntimeError('Error executing the notebook %s' % fname)
-    
+        #raise RuntimeError('Error executing the notebook %s' % fname)
+        return False
     
 def test_notebooks():
 
-    notebook_lst = get_exercise_notebooks(r'../Exercise_notebooks/Basic')
-    for fname in notebook_lst[:3]:
+    notebook_lst = get_notebooks(r'../Exercise_notebooks/Basic')
+    for fname in notebook_lst:
         if os.path.split(fname)[-1] not in _exclude_nb_list:
-            run_notebook(fname)
-
+            out = run_notebook(fname)
+            assert out==True, 'Error executing the notebook %s' % fname
+            
+    notebook_lst = get_notebooks(r'../Exercise_notebooks/On_topic')
+    for fname in notebook_lst:
+        if os.path.split(fname)[-1] not in _exclude_nb_list:
+            out=run_notebook(fname)
+            assert out==True, 'Error executing the notebook %s' % fname
 
 if __name__ == '__main__':
-    
-    notebook_lst = get_exercise_notebooks(r'../Exercise_notebooks/Basic')
-    for fname in notebook_lst:
-        if os.path.split(fname)[-1] not in _exclude_nb_list:
-            run_notebook(fname)
-            
-    notebook_lst = get_exercise_notebooks(r'../Exercise_notebooks/On_topic')
-    for fname in notebook_lst:
-        if os.path.split(fname)[-1] not in _exclude_nb_list:
-            run_notebook(fname)
+    test_notebooks()
