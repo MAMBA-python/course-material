@@ -37,6 +37,7 @@ def strftime_to_re_pattern(strftime_format):
 
     return re_pattern
 
+
 def read_whatsapp(whatsapp_file, datetime_pattern = None,
                   user_sep=':', strftime_format = '[%d/%m/%Y, %H:%M:%S]',
                   encoding="utf8"):
