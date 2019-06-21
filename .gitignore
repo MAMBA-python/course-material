@@ -6,3 +6,6 @@ Practical_examples/modelling/groundwater_model/results/*
 **/*.ipynb_checkpoints/
 
 .vscode
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
