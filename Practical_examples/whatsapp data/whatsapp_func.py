@@ -40,7 +40,7 @@ def strftime_to_re_pattern(strftime_format):
 
 def read_whatsapp(whatsapp_file, datetime_pattern = None,
                   user_sep=':', strftime_format = '[%d/%m/%Y, %H:%M:%S]',
-                  encoding="utf8"):
+                  encoding="utf8", max_non_message_lines=5):
     """
     read a whatsapp data file into a pandas dataframe
 
@@ -56,6 +56,9 @@ def read_whatsapp(whatsapp_file, datetime_pattern = None,
         the format of the date in the whatsapp file
     encoding: str, optional
         encoding of the whatsapp txt file
+	max_non_message_lines: int, optional
+		the number of non message lines at the beginning of the file. For example
+		.. was added to the conversation \n
 
     Returns
     -------
@@ -84,7 +87,7 @@ def read_whatsapp(whatsapp_file, datetime_pattern = None,
         # filter weird intro line (without a user)
         intro_line = True
         counter = 0
-        while intro_line + (counter < 5) == 2:
+        while intro_line + (counter < max_non_message_lines) == 2:
             try:
                 check_date_pattern(line, re_datetime)
                 check_date_user_pattern(line, re_datetimeuser)
@@ -103,7 +106,8 @@ def read_whatsapp(whatsapp_file, datetime_pattern = None,
         datetime_list = [date]
         user_list = [user]
         message_list = [message]
-
+		
+		# loop over all other messages
         for line in fo:
             pattern_match = re_datetimeuser.search(line)
             if pattern_match:
