@@ -1,0 +1,419 @@
+INFO:root:succesfully finished "Notebook Basics.ipynb"
+INFO:root:succesfully finished "Running code.ipynb"
+INFO:root:succesfully finished "py_exploratory_comp_2.ipynb"
+INFO:root:succesfully finished "py_exploratory_comp_3.ipynb"
+INFO:root:succesfully finished "Notebook Basics.ipynb"
+INFO:root:succesfully finished "Running code.ipynb"
+INFO:root:succesfully finished "01_numbers.ipynb"
+INFO:root:succesfully finished "01_numbers_exercise.ipynb"
+INFO:root:succesfully finished "02_strings.ipynb"
+INFO:root:succesfully finished "03_lists.ipynb"
+INFO:root:succesfully finished "04_dictionaries.ipynb"
+INFO:root:succesfully finished "02_excercises_pandas.ipynb"
+INFO:root:succesfully finished "02_exercises_pandas_sol.ipynb"
+INFO:root:succesfully finished "03_py_exploratory_comp_8_sol.ipynb"
+INFO:root:succesfully finished "04_pandas_methods_vs_functions.ipynb"
+INFO:root:succesfully finished "01_matplotlib.ipynb"
+INFO:root:succesfully finished "02_py_exploratory_comp_1.ipynb"
+INFO:root:succesfully finished "01-numpy.ipynb"
+INFO:root:succesfully finished "02-linear_equations_mb6.ipynb"
+INFO:root:succesfully finished "02-linear_equations_mb6_sol.ipynb"
+INFO:root:succesfully finished "01_functions.ipynb"
+INFO:root:succesfully finished "01_classes.ipynb"
+INFO:root:succesfully finished "geopandas.ipynb"
+INFO:root:succesfully finished "GIS_pyshp.ipynb"
+ERROR:root:could not run "introduction_raster_IO.ipynb"
+ERROR:root:error message:
+
+[NbConvertApp] Converting notebook introduction_raster_IO.ipynb to notebook
+Traceback (most recent call last):
+  File "C:\Anaconda3\Scripts\jupyter-nbconvert-script.py", line 9, in <module>
+    sys.exit(main())
+  File "C:\Anaconda3\lib\site-packages\jupyter_core\application.py", line 267, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "C:\Anaconda3\lib\site-packages\traitlets\config\application.py", line 658, in launch_instance
+    app.start()
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 338, in start
+    self.convert_notebooks()
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 508, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 479, in convert_single_notebook
+    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 408, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 179, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 197, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super(NotebookExporter, self).from_notebook_node(nb, resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 139, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 316, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 379, in preprocess
+    with self.setup_preprocessor(nb, resources, km=km):
+  File "C:\Anaconda3\lib\contextlib.py", line 81, in __enter__
+    return next(self.gen)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 324, in setup_preprocessor
+    self.km, self.kc = self.start_new_kernel(cwd=path)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 271, in start_new_kernel
+    km.start_kernel(extra_arguments=self.extra_arguments, **kwargs)
+  File "C:\Anaconda3\lib\site-packages\jupyter_client\manager.py", line 246, in start_kernel
+    kernel_cmd = self.format_kernel_cmd(extra_arguments=extra_arguments)
+  File "C:\Anaconda3\lib\site-packages\jupyter_client\manager.py", line 170, in format_kernel_cmd
+    cmd = self.kernel_spec.argv + extra_arguments
+  File "C:\Anaconda3\lib\site-packages\jupyter_client\manager.py", line 82, in kernel_spec
+    self._kernel_spec = self.kernel_spec_manager.get_kernel_spec(self.kernel_name)
+  File "C:\Anaconda3\lib\site-packages\jupyter_client\kernelspec.py", line 236, in get_kernel_spec
+    raise NoSuchKernel(kernel_name)
+jupyter_client.kernelspec.NoSuchKernel: No such kernel named conda-env-GIS_py36-py
+
+
+
+INFO:root:succesfully finished "01_file_io.ipynb"
+INFO:root:succesfully finished "03-files.ipynb"
+ERROR:root:could not run "01-IntroDBWorkshop.ipynb"
+ERROR:root:error message:
+
+[NbConvertApp] Converting notebook 01-IntroDBWorkshop.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+[NbConvertApp] ERROR | Error while converting '01-IntroDBWorkshop.ipynb'
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 408, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 179, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 197, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super(NotebookExporter, self).from_notebook_node(nb, resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 139, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 316, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 381, in preprocess
+    nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 69, in preprocess
+    nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 424, in preprocess_cell
+    raise CellExecutionError.from_cell_and_msg(cell, out)
+nbconvert.preprocessors.execute.CellExecutionError: An error occurred while executing the following cell:
+------------------
+cursor.execute("SELECT id FROM companies WHERE name=?", ("Georgetown University",))
+print cursor.fetchone()
+------------------
+
+[1;36m  File [1;32m"<ipython-input-8-cdf8a1374688>"[1;36m, line [1;32m2[0m
+[1;33m    print cursor.fetchone()[0m
+[1;37m               ^[0m
+[1;31mSyntaxError[0m[1;31m:[0m invalid syntax
+
+SyntaxError: invalid syntax (<ipython-input-8-cdf8a1374688>, line 2)
+
+
+
+
+INFO:root:succesfully finished "02-IntroSQLJoins.ipynb"
+INFO:root:succesfully finished "01_best_practices.ipynb"
+INFO:root:succesfully finished "03_Quality_ZEN_of_Python.ipynb"
+INFO:root:succesfully finished "idiomatic_dicts.ipynb"
+INFO:root:succesfully finished "idiomatic_loops.ipynb"
+INFO:root:succesfully finished "idiomatic_misc1.ipynb"
+INFO:root:succesfully finished "idiomatic_misc2.ipynb"
+INFO:root:succesfully finished "idiomatic_python_exercise.ipynb"
+INFO:root:succesfully finished "03_lists.ipynb"
+INFO:root:succesfully finished "04_dictionaries.ipynb"
+INFO:root:succesfully finished "01_numbers.ipynb"
+INFO:root:succesfully finished "01_numbers_exercise.ipynb"
+INFO:root:succesfully finished "02_strings.ipynb"
+INFO:root:succesfully finished "02_exceptions.ipynb"
+INFO:root:succesfully finished "scipy_optimize_mb5.ipynb"
+INFO:root:succesfully finished "scipy_optimize_mb5_sol.ipynb"
+INFO:root:succesfully finished "01-testing.ipynb"
+INFO:root:succesfully finished "02-testing2.ipynb"
+INFO:root:succesfully finished "01_datetime.ipynb"
+INFO:root:succesfully finished "01_conditionals.ipynb"
+INFO:root:succesfully finished "03_for_loops.ipynb"
+INFO:root:succesfully finished "01-cmdline.ipynb"
+INFO:root:succesfully finished "01-debugging.ipynb"
+INFO:root:succesfully finished "02-debugging.ipynb"
+INFO:root:succesfully finished "01_modules_and_packages.ipynb"
+INFO:root:succesfully finished "00 - Introduction and Setup.ipynb"
+INFO:root:succesfully finished "01 - Basic Plotting.ipynb"
+INFO:root:succesfully finished "02 - Styling and Theming.ipynb"
+INFO:root:succesfully finished "03 - Data Sources and Transformations.ipynb"
+INFO:root:succesfully finished "04 - Adding Annotations.ipynb"
+INFO:root:succesfully finished "05 - Presentation Layouts.ipynb"
+INFO:root:succesfully finished "06 - Linking and Interactions.ipynb"
+INFO:root:succesfully finished "07 - Bar and Categorical Data Plots.ipynb"
+INFO:root:succesfully finished "08 - Graph and Network Plots.ipynb"
+ERROR:root:could not run "10 - Exporting and Embedding.ipynb"
+ERROR:root:error message:
+
+[NbConvertApp] Converting notebook 10 - Exporting and Embedding.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+[NbConvertApp] ERROR | Error while converting '10 - Exporting and Embedding.ipynb'
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 408, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 179, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 197, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super(NotebookExporter, self).from_notebook_node(nb, resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 139, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 316, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 381, in preprocess
+    nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 69, in preprocess
+    nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 424, in preprocess_cell
+    raise CellExecutionError.from_cell_and_msg(cell, out)
+nbconvert.preprocessors.execute.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from bokeh.io import export_png
+
+p = figure(plot_width=800, plot_height=250, x_axis_type="datetime")
+p.line(df['date'], df['close'], color='navy', alpha=0.5)
+
+export_png(p, filename="plot.png")
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\dependencies.py[0m in [0;36mimport_required[1;34m(mod_name, error_msg)[0m
+[0;32m     86[0m     [1;32mtry[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 87[1;33m         [1;32mreturn[0m [0mimport_module[0m[1;33m([0m[0mmod_name[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     88[0m     [1;32mexcept[0m [0mImportError[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\importlib\__init__.py[0m in [0;36mimport_module[1;34m(name, package)[0m
+[0;32m    125[0m             [0mlevel[0m [1;33m+=[0m [1;36m1[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 126[1;33m     [1;32mreturn[0m [0m_bootstrap[0m[1;33m.[0m[0m_gcd_import[0m[1;33m([0m[0mname[0m[1;33m[[0m[0mlevel[0m[1;33m:[0m[1;33m][0m[1;33m,[0m [0mpackage[0m[1;33m,[0m [0mlevel[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    127[0m [1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_gcd_import[1;34m(name, package, level)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_find_and_load[1;34m(name, import_)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_find_and_load_unlocked[1;34m(name, import_)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_call_with_frames_removed[1;34m(f, *args, **kwds)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_gcd_import[1;34m(name, package, level)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_find_and_load[1;34m(name, import_)[0m
+
+[1;32mC:\Anaconda3\lib\importlib\_bootstrap.py[0m in [0;36m_find_and_load_unlocked[1;34m(name, import_)[0m
+
+[1;31mModuleNotFoundError[0m: No module named 'selenium'
+
+During handling of the above exception, another exception occurred:
+
+[1;31mRuntimeError[0m                              Traceback (most recent call last)
+[1;32m<ipython-input-14-e53f6cb5a34c>[0m in [0;36m<module>[1;34m[0m
+[0;32m      4[0m [0mp[0m[1;33m.[0m[0mline[0m[1;33m([0m[0mdf[0m[1;33m[[0m[1;34m'date'[0m[1;33m][0m[1;33m,[0m [0mdf[0m[1;33m[[0m[1;34m'close'[0m[1;33m][0m[1;33m,[0m [0mcolor[0m[1;33m=[0m[1;34m'navy'[0m[1;33m,[0m [0malpha[0m[1;33m=[0m[1;36m0.5[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m      5[0m [1;33m[0m[0m
+[1;32m----> 6[1;33m [0mexport_png[0m[1;33m([0m[0mp[0m[1;33m,[0m [0mfilename[0m[1;33m=[0m[1;34m"plot.png"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\export.py[0m in [0;36mexport_png[1;34m(obj, filename, height, width, webdriver, timeout)[0m
+[0;32m     95[0m     '''
+[0;32m     96[0m [1;33m[0m[0m
+[1;32m---> 97[1;33m     [0mimage[0m [1;33m=[0m [0mget_screenshot_as_png[0m[1;33m([0m[0mobj[0m[1;33m,[0m [0mheight[0m[1;33m=[0m[0mheight[0m[1;33m,[0m [0mwidth[0m[1;33m=[0m[0mwidth[0m[1;33m,[0m [0mdriver[0m[1;33m=[0m[0mwebdriver[0m[1;33m,[0m [0mtimeout[0m[1;33m=[0m[0mtimeout[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     98[0m [1;33m[0m[0m
+[0;32m     99[0m     [1;32mif[0m [0mfilename[0m [1;32mis[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\export.py[0m in [0;36mget_screenshot_as_png[1;34m(obj, driver, timeout, **kwargs)[0m
+[0;32m    215[0m             [0mfile[0m[1;33m.[0m[0mwrite[0m[1;33m([0m[0mdecode_utf8[0m[1;33m([0m[0mhtml[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    216[0m [1;33m[0m[0m
+[1;32m--> 217[1;33m         [0mweb_driver[0m [1;33m=[0m [0mdriver[0m [1;32mif[0m [0mdriver[0m [1;32mis[0m [1;32mnot[0m [1;32mNone[0m [1;32melse[0m [0mwebdriver_control[0m[1;33m.[0m[0mget[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    218[0m [1;33m[0m[0m
+[0;32m    219[0m         [0mweb_driver[0m[1;33m.[0m[0mget[0m[1;33m([0m[1;34m"file:///"[0m [1;33m+[0m [0mtmp[0m[1;33m.[0m[0mpath[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\webdriver.py[0m in [0;36mget[1;34m(self)[0m
+[0;32m    114[0m             [1;32mif[0m [0mself[0m[1;33m.[0m[0mcurrent[0m [1;32mis[0m [1;32mnot[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    115[0m                 [0mterminate_webdriver[0m[1;33m([0m[0mself[0m[1;33m.[0m[0mcurrent[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 116[1;33m             [0mself[0m[1;33m.[0m[0mcurrent[0m [1;33m=[0m [0mself[0m[1;33m.[0m[0mcreate[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    117[0m         [1;32mreturn[0m [0mself[0m[1;33m.[0m[0mcurrent[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    118[0m [1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\webdriver.py[0m in [0;36mcreate[1;34m(self)[0m
+[0;32m    119[0m     [1;32mdef[0m [0mcreate[0m[1;33m([0m[0mself[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    120[0m         [1;32mif[0m [0mself[0m[1;33m.[0m[0mkind[0m [1;33m==[0m [1;34m"phantomjs"[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 121[1;33m             [1;32mreturn[0m [0mcreate_phantomjs_webdriver[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    122[0m         [1;32mraise[0m [0mValueError[0m[1;33m([0m[1;34m"Unknown webdriver kind %r"[0m [1;33m%[0m [0mself[0m[1;33m.[0m[0mkind[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    123[0m [1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\webdriver.py[0m in [0;36mcreate_phantomjs_webdriver[1;34m()[0m
+[0;32m     71[0m         webdriver = import_required('selenium.webdriver',
+[0;32m     72[0m                                     [1;34m'To use bokeh.io image export functions you need selenium '[0m [1;33m+[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 73[1;33m                                     '("conda install -c bokeh selenium" or "pip install selenium")')
+[0m[0;32m     74[0m [1;33m[0m[0m
+[0;32m     75[0m         [0mphantomjs_path[0m [1;33m=[0m [0mdetect_phantomjs[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\dependencies.py[0m in [0;36mimport_required[1;34m(mod_name, error_msg)[0m
+[0;32m     87[0m         [1;32mreturn[0m [0mimport_module[0m[1;33m([0m[0mmod_name[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m     88[0m     [1;32mexcept[0m [0mImportError[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 89[1;33m         [1;32mraise[0m [0mRuntimeError[0m[1;33m([0m[0merror_msg[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m     90[0m [1;33m[0m[0m
+[0;32m     91[0m [1;32mdef[0m [0mdetect_phantomjs[0m[1;33m([0m[0mversion[0m[1;33m=[0m[1;34m'2.1'[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;31mRuntimeError[0m: To use bokeh.io image export functions you need selenium ("conda install -c bokeh selenium" or "pip install selenium")
+RuntimeError: To use bokeh.io image export functions you need selenium ("conda install -c bokeh selenium" or "pip install selenium")
+
+
+
+
+INFO:root:succesfully finished "11 - Running Bokeh Applications.ipynb"
+ERROR:root:could not run "A1 - Models and Primitives.ipynb"
+ERROR:root:error message:
+
+[NbConvertApp] Converting notebook A1 - Models and Primitives.ipynb to notebook
+[NbConvertApp] Executing notebook with kernel: python3
+[NbConvertApp] ERROR | Error while converting 'A1 - Models and Primitives.ipynb'
+Traceback (most recent call last):
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 408, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 179, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 197, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\notebook.py", line 32, in from_notebook_node
+    nb_copy, resources = super(NotebookExporter, self).from_notebook_node(nb, resources, **kw)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 139, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 316, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 381, in preprocess
+    nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 69, in preprocess
+    nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 424, in preprocess_cell
+    raise CellExecutionError.from_cell_and_msg(cell, out)
+nbconvert.preprocessors.execute.CellExecutionError: An error occurred while executing the following cell:
+------------------
+from bokeh.io import show, output_file
+from bokeh.layouts import column
+from bokeh.models import Slider
+
+slider = Slider(start=0, end=10, step=0.1, value=0, title="value")
+
+custom = Custom(text="Special Slider Display", slider=slider)
+
+layout = column(slider, custom)
+
+# Necessary to explicitly reload BokehJS to pick up new extension code
+output_notebook()
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mRuntimeError[0m                              Traceback (most recent call last)
+[1;32m<ipython-input-20-365f1a51b382>[0m in [0;36m<module>[1;34m[0m
+[0;32m     10[0m [1;33m[0m[0m
+[0;32m     11[0m [1;31m# Necessary to explicitly reload BokehJS to pick up new extension code[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[1;32m---> 12[1;33m [0moutput_notebook[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\output.py[0m in [0;36moutput_notebook[1;34m(resources, verbose, hide_banner, load_timeout, notebook_type)[0m
+[0;32m    115[0m     [1;31m# verify notebook_type first in curstate().output_notebook[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    116[0m     [0mcurstate[0m[1;33m([0m[1;33m)[0m[1;33m.[0m[0moutput_notebook[0m[1;33m([0m[0mnotebook_type[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 117[1;33m     [0mrun_notebook_hook[0m[1;33m([0m[0mnotebook_type[0m[1;33m,[0m [1;34m'load'[0m[1;33m,[0m [0mresources[0m[1;33m,[0m [0mverbose[0m[1;33m,[0m [0mhide_banner[0m[1;33m,[0m [0mload_timeout[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    118[0m [1;33m[0m[0m
+[0;32m    119[0m [1;32mdef[0m [0mreset_output[0m[1;33m([0m[0mstate[0m[1;33m=[0m[1;32mNone[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\notebook.py[0m in [0;36mrun_notebook_hook[1;34m(notebook_type, action, *args, **kw)[0m
+[0;32m    300[0m     [1;32mif[0m [0m_HOOKS[0m[1;33m[[0m[0mnotebook_type[0m[1;33m][0m[1;33m[[0m[0maction[0m[1;33m][0m [1;32mis[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    301[0m         [1;32mraise[0m [0mRuntimeError[0m[1;33m([0m[1;34m"notebook hook for %r did not install %r action"[0m [1;33m%[0m [0mnotebook_type[0m[1;33m,[0m [0maction[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 302[1;33m     [1;32mreturn[0m [0m_HOOKS[0m[1;33m[[0m[0mnotebook_type[0m[1;33m][0m[1;33m[[0m[0maction[0m[1;33m][0m[1;33m([0m[1;33m*[0m[0margs[0m[1;33m,[0m [1;33m**[0m[0mkw[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    303[0m [1;33m[0m[0m
+[0;32m    304[0m [1;31m#-----------------------------------------------------------------------------[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\io\notebook.py[0m in [0;36mload_notebook[1;34m(resources, verbose, hide_banner, load_timeout)[0m
+[0;32m    411[0m     [0m_NOTEBOOK_LOADED[0m [1;33m=[0m [0mresources[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    412[0m [1;33m[0m[0m
+[1;32m--> 413[1;33m     [0mcustom_models_js[0m [1;33m=[0m [0mbundle_all_models[0m[1;33m([0m[1;33m)[0m [1;32mor[0m [1;34m""[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    414[0m [1;33m[0m[0m
+[0;32m    415[0m     [0mnb_js[0m [1;33m=[0m [0m_loading_js[0m[1;33m([0m[0mresources[0m[1;33m,[0m [0melement_id[0m[1;33m,[0m [0mcustom_models_js[0m[1;33m,[0m [0mload_timeout[0m[1;33m,[0m [0mregister_mime[0m[1;33m=[0m[1;32mTrue[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36mbundle_all_models[1;34m()[0m
+[0;32m    345[0m [1;32mdef[0m [0mbundle_all_models[0m[1;33m([0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    346[0m     [1;34m"""Create a bundle of all models. """[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 347[1;33m     [1;32mreturn[0m [0mbundle_models[0m[1;33m([0m[1;32mNone[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    348[0m [1;33m[0m[0m
+[0;32m    349[0m [1;31m#-----------------------------------------------------------------------------[0m[1;33m[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36mbundle_models[1;34m(models)[0m
+[0;32m    336[0m     [1;32mif[0m [0mbundle[0m [1;32mis[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    337[0m         [1;32mtry[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 338[1;33m             [0m_bundle_cache[0m[1;33m[[0m[0mkey[0m[1;33m][0m [1;33m=[0m [0mbundle[0m [1;33m=[0m [0m_bundle_models[0m[1;33m([0m[0mcustom_models[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    339[0m         [1;32mexcept[0m [0mCompilationError[0m [1;32mas[0m [0merror[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    340[0m             [0mprint[0m[1;33m([0m[1;34m"Compilation failed:"[0m[1;33m,[0m [0mfile[0m[1;33m=[0m[0msys[0m[1;33m.[0m[0mstderr[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36m_bundle_models[1;34m(custom_models)[0m
+[0;32m    553[0m     [0mbundles[0m [1;33m=[0m [1;33m[[0m[1;34m"bokeh"[0m[1;33m,[0m [1;34m"bokeh-api"[0m[1;33m,[0m [1;34m"bokeh-widgets"[0m[1;33m,[0m [1;34m"bokeh-tables"[0m[1;33m,[0m [1;34m"bokeh-gl"[0m[1;33m][0m[1;33m[0m[1;33m[0m[0m
+[0;32m    554[0m     [0mknown_modules[0m [1;33m=[0m [0mset[0m[1;33m([0m[0msum[0m[1;33m([0m[1;33m[[0m [0mread_json[0m[1;33m([0m[0mname[0m[1;33m)[0m [1;32mfor[0m [0mname[0m [1;32min[0m [0mbundles[0m [1;33m][0m[1;33m,[0m [1;33m[[0m[1;33m][0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 555[1;33m     [0mcustom_impls[0m [1;33m=[0m [0m_compile_models[0m[1;33m([0m[0mcustom_models[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    556[0m [1;33m[0m[0m
+[0;32m    557[0m     [0mextra_modules[0m [1;33m=[0m [1;33m{[0m[1;33m}[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36m_compile_models[1;34m(custom_models)[0m
+[0;32m    533[0m         [0mcompiled[0m [1;33m=[0m [0m_CACHING_IMPLEMENTATION[0m[1;33m([0m[0mmodel[0m[1;33m,[0m [0mimpl[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    534[0m         [1;32mif[0m [0mcompiled[0m [1;32mis[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 535[1;33m             [0mcompiled[0m [1;33m=[0m [0mnodejs_compile[0m[1;33m([0m[0mimpl[0m[1;33m.[0m[0mcode[0m[1;33m,[0m [0mlang[0m[1;33m=[0m[0mimpl[0m[1;33m.[0m[0mlang[0m[1;33m,[0m [0mfile[0m[1;33m=[0m[0mimpl[0m[1;33m.[0m[0mfile[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    536[0m [1;33m[0m[0m
+[0;32m    537[0m         [1;32mif[0m [1;34m"error"[0m [1;32min[0m [0mcompiled[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36mnodejs_compile[1;34m(code, lang, file)[0m
+[0;32m    109[0m                    "Use JavaScript or TypeScript directly instead.")
+[0;32m    110[0m     [0mcompilejs_script[0m [1;33m=[0m [0mjoin[0m[1;33m([0m[0mbokehjs_dir[0m[1;33m,[0m [1;34m"js"[0m[1;33m,[0m [1;34m"compiler.js"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 111[1;33m     [0moutput[0m [1;33m=[0m [0m_run_nodejs[0m[1;33m([0m[1;33m[[0m[0mcompilejs_script[0m[1;33m][0m[1;33m,[0m [0mdict[0m[1;33m([0m[0mcode[0m[1;33m=[0m[0mcode[0m[1;33m,[0m [0mlang[0m[1;33m=[0m[0mlang[0m[1;33m,[0m [0mfile[0m[1;33m=[0m[0mfile[0m[1;33m,[0m [0mbokehjs_dir[0m[1;33m=[0m[0mbokehjs_dir[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    112[0m     [0mlines[0m [1;33m=[0m [0moutput[0m[1;33m.[0m[0msplit[0m[1;33m([0m[1;34m"\n"[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    113[0m     [1;32mfor[0m [0mi[0m[1;33m,[0m [0mline[0m [1;32min[0m [0menumerate[0m[1;33m([0m[0mlines[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36m_run_nodejs[1;34m(argv, input)[0m
+[0;32m    480[0m [1;33m[0m[0m
+[0;32m    481[0m [1;32mdef[0m [0m_run_nodejs[0m[1;33m([0m[0margv[0m[1;33m,[0m [0minput[0m[1;33m=[0m[1;32mNone[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 482[1;33m     [1;32mreturn[0m [0m_run[0m[1;33m([0m[0m_nodejs_path[0m[1;33m([0m[1;33m)[0m[1;33m,[0m [0margv[0m[1;33m,[0m [0minput[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    483[0m [1;33m[0m[0m
+[0;32m    484[0m [1;32mdef[0m [0m_run_npmjs[0m[1;33m([0m[0margv[0m[1;33m,[0m [0minput[0m[1;33m=[0m[1;32mNone[0m[1;33m)[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36m_nodejs_path[1;34m()[0m
+[0;32m    456[0m     [1;32mglobal[0m [0m_nodejs[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    457[0m     [1;32mif[0m [0m_nodejs[0m [1;32mis[0m [1;32mNone[0m[1;33m:[0m[1;33m[0m[1;33m[0m[0m
+[1;32m--> 458[1;33m         [0m_nodejs[0m [1;33m=[0m [0m_detect_nodejs[0m[1;33m([0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0m[0;32m    459[0m     [1;32mreturn[0m [0m_nodejs[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    460[0m [1;33m[0m[0m
+
+[1;32mC:\Anaconda3\lib\site-packages\bokeh\util\compiler.py[0m in [0;36m_detect_nodejs[1;34m()[0m
+[0;32m    448[0m     [0mversion[0m [1;33m=[0m [1;34m"."[0m[1;33m.[0m[0mjoin[0m[1;33m([0m[0mmap[0m[1;33m([0m[0mstr[0m[1;33m,[0m [0mnodejs_min_version[0m[1;33m)[0m[1;33m)[0m[1;33m[0m[1;33m[0m[0m
+[0;32m    449[0m     raise RuntimeError('node.js v%s or higher is needed to allow compilation of custom models ' % version +
+[1;32m--> 450[1;33m                        '("conda install nodejs" or follow https://nodejs.org/en/download/)')
+[0m[0;32m    451[0m [1;33m[0m[0m
+[0;32m    452[0m [0m_nodejs[0m [1;33m=[0m [1;32mNone[0m[1;33m[0m[1;33m[0m[0m
+
+[1;31mRuntimeError[0m: node.js v6.10.0 or higher is needed to allow compilation of custom models ("conda install nodejs" or follow https://nodejs.org/en/download/)
+RuntimeError: node.js v6.10.0 or higher is needed to allow compilation of custom models ("conda install nodejs" or follow https://nodejs.org/en/download/)
+
+
+
+
+INFO:root:succesfully finished "A2 - Visualizing Big Data with Datashader.ipynb"
+INFO:root:succesfully finished "A3 - High-Level Charting with Holoviews.ipynb"
+INFO:root:succesfully finished "A4 - Additional Resources.ipynb"
+INFO:root:succesfully finished "Folium01_and_mplleaflet.ipynb"
+INFO:root:succesfully finished "Folium02_CheckZorder.ipynb"
+INFO:root:succesfully finished "Folium03_Colormaps.ipynb"
+INFO:root:succesfully finished "Folium04_ContinuousWorld.ipynb"
+INFO:root:succesfully finished "Folium05_ControlScale.ipynb"
+INFO:root:succesfully finished "Folium06_FloatImage.ipynb"
+INFO:root:succesfully finished "Folium07_WMS_and_WMTS.ipynb"

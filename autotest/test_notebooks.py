@@ -3,14 +3,51 @@
 # Remove the temp directory and then create a fresh one
 import os
 import pytest
+import sys
+from subprocess import Popen, PIPE
+import logging
+
+try:
+    os.remove('tests.log')
+except FileNotFoundError:
+    pass
+
+logging.basicConfig(filename='tests.log',level=logging.DEBUG)
 
 #these notebooks are excluded because they contain errors on purpose
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     '02_strings_exercise.ipynb', '03_lists_exercise.ipynb',
                     '04_dictionaries_exercise.ipynb', '01_recap1_exercise.ipynb',
-                    '01_Data inlezen met Pandas.ipynb', 
+                    '01_data_inlezen_met_pandas_dutch.ipynb', 
                     '01_functions_exercise.ipynb', 
+                    '02_py_exploratory_comp_4.ipynb',
+                    '02_py_exploratory_comp_4_sol.ipynb',
+                    '03-func.ipynb',
+                    '01_classes_exercise.ipynb',
+                    '01_file_io_exercise.ipynb',
+                    '01-IntroDBWorkshop.ipynb',
+                    '02_common_pitfalls.ipynb',
+                    '01-errors.ipynb',
+                    '02_exceptions_exercise.ipynb',
+                    '03_py_exploratory_comp_7.ipynb',
+                    '03_py_exploratory_comp_7_sol.ipynb',
+                    '01-testing1_exercise.ipynb',
+                    '02-testing2_exercise.ipynb',
+                    '03-defensive.ipynb',
+                    '01_datetime_exercise.ipynb',
+                    '01_conditionals_exercise.ipynb',
+                    '02-cond.ipynb',
+                    '03_for_loops_exercise.ipynb',
+                    '04-loop.ipynb',
+                    '01-debugging_exercise.ipynb',
+                    '09 - Geographic Plots.ipynb',
+                    
                     ]
+
+#make projectdir accessible inside this script
+TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
+sys.path.insert(0, PROJECT_DIR)
 
 def get_notebooks(exercise_nb_dir):
     """
@@ -28,7 +65,8 @@ def get_notebooks(exercise_nb_dir):
     
     """
     notebook_list = []
-    for root, dirs, files in os.walk(exercise_nb_dir):
+    for root, dirs, files in os.walk(os.path.join(sys.path[0], 
+                                                  exercise_nb_dir)):
         for file in files:
             if file.endswith(".ipynb"):
                 if not '.ipynb_checkpoints' in os.path.join(root, file):
@@ -36,49 +74,94 @@ def get_notebooks(exercise_nb_dir):
     
     return notebook_list
 
-def run_notebook(fname):
-    """
+def run_notebook(fname, active_processes):
+    """ Run a single notebook and add the process to a list of active
+    processes.
     
     Parameters
     ----------
     fname: str
         full file name of the notebooks that will be run
+    active_processes : list of SubprocessPopen
+        active processes where each process is running one jupyter notebook
+        
+    Returns
+    -------
+    active_processes : list of SubprocessPopen
+        active processes where each process is running one jupyter notebook
+    """
+    file_l = os.path.split(fname)
+    
+    cmd_args = 'jupyter nbconvert --ExecutePreprocessor.timeout=1200 --to notebook --execute "{}" --output "{}"'.format(file_l[1], file_l[1])
+    p = Popen(cmd_args, stdout=PIPE, stderr=PIPE, encoding='utf8', cwd=file_l[0])
+    active_processes.append(p)
+    
+    return active_processes
+
+def check_notebook(active_processes, max_processes=3):
+    """ When there are as many or more processes activate than max_processes
+    this function will wait for the first process to finish. It then logs the
+    result of this process.
+    
+    Parameters
+    ----------
+    active_processes : list of SubprocessPopen
+        active processes where each process is running one jupyter notebook
+    max_processes : int
+        number of notebooks that can run simultaneously
+        
+    Returns
+    -------
+    active_processes : list of SubprocessPopen
+        active processes where each process is running one jupyter notebook
+    """
+    
+    if len(active_processes) >= max_processes:
+        p = active_processes.pop(0)
+        output, error = p.communicate()
+        
+        if p.returncode == 0:
+            print('succesfully finished {}'.format(p.args.split('output ')[-1]))
+            logging.info('succesfully finished {}'.format(p.args.split('output ')[-1]))
+        else:
+            print('could not run {}'.format(p.args.split('output ')[-1]))
+            #print('error message:\n\n{}\n\n'.format(error))
+            logging.error('could not run {}'.format(p.args.split('output ')[-1]))
+            logging.error('error message:\n\n{}\n\n'.format(error))
+    return active_processes
+    
+
+    
+def test_notebooks():
+    """ Run all notebooks
+    
+    Parameters
+    ----------
+    
+    Returns
+    -------
     
     """
 
-    pth, fn = os.path.split(fname)
-
-    import nbformat
-    from nbconvert.preprocessors import ExecutePreprocessor
-    from nbconvert.preprocessors import CellExecutionError
+    notebook_lst = get_notebooks(r'Exercise_notebooks/Basic')
+    print('testing {} notebooks'.format(len(notebook_lst)))
+    assert len(notebook_lst)!=0, 'No notebooks to be tested'
     
-    with open(fname) as f:
-        nb = nbformat.read(f, as_version=4)
-        
-    ep = ExecutePreprocessor(timeout=600)
-    try:
-        ep.preprocess(nb, {'metadata': {'path': os.path.split(fname)[0]}})
-        msg = 'succesfully executed the notebook %s' %fname
-        print(msg)
-        
-        return True
-    except CellExecutionError:
-        #raise RuntimeError('Error executing the notebook %s' % fname)
-        return False
-    
-def test_notebooks():
-
-    notebook_lst = get_notebooks(r'../Exercise_notebooks/Basic')
+    active_processes = []
     for fname in notebook_lst:
         if os.path.split(fname)[-1] not in _exclude_nb_list:
-            out = run_notebook(fname)
-            assert out==True, 'Error executing the notebook %s' % fname
-            
-    notebook_lst = get_notebooks(r'../Exercise_notebooks/On_topic')
+            active_processes = run_notebook(fname, active_processes)
+            active_processes = check_notebook(active_processes)
+    for p in range(len(active_processes)):
+        active_processes = check_notebook(active_processes, max_processes=0)
+           
+    notebook_lst = get_notebooks(r'Exercise_notebooks/On_topic')
     for fname in notebook_lst:
         if os.path.split(fname)[-1] not in _exclude_nb_list:
-            out=run_notebook(fname)
-            assert out==True, 'Error executing the notebook %s' % fname
+            active_processes = run_notebook(fname, active_processes)
+            active_processes = check_notebook(active_processes)
+    for p in range(len(active_processes)):
+        active_processes = check_notebook(active_processes, max_processes=0)
 
 if __name__ == '__main__':
     test_notebooks()
