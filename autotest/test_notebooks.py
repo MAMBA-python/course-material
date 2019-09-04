@@ -6,10 +6,13 @@ import pytest
 import sys
 from subprocess import Popen, PIPE
 import logging
+import nbformat
 
 try:
     os.remove('tests.log')
 except FileNotFoundError:
+    pass
+except PermissionError:
     pass
 
 logging.basicConfig(filename='tests.log',level=logging.DEBUG)
@@ -44,10 +47,14 @@ _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     
                     ]
 
+_keep_output_list = ['02_py_exploratory_comp_4_sol.ipynb']
+
 #make projectdir accessible inside this script
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
 sys.path.insert(0, PROJECT_DIR)
+
+
 
 def get_notebooks(exercise_nb_dir):
     """
@@ -92,11 +99,36 @@ def run_notebook(fname, active_processes):
     """
     file_l = os.path.split(fname)
     
+    print('running --> {}'.format(file_l[-1]))
+    
     cmd_args = 'jupyter nbconvert --ExecutePreprocessor.timeout=1200 --to notebook --execute "{}" --output "{}"'.format(file_l[1], file_l[1])
     p = Popen(cmd_args, stdout=PIPE, stderr=PIPE, encoding='utf8', cwd=file_l[0])
     active_processes.append(p)
     
     return active_processes
+
+def clear_output(fname):
+    """ clear the output of a notebook. This should be done to reduce size
+    and improve the speed of the git stuff.
+    
+    Parameters
+    ----------
+    fname: str
+        full path of the notebook which is cleared of output
+    
+    """
+    
+    nb = nbformat.read(fname, nbformat.NO_CONVERT)
+    
+    for cell in nb.cells:
+        if hasattr(cell, "outputs"):
+            cell.outputs = []
+        if hasattr(cell, "execution_count"):
+            cell["execution_count"] = None
+    
+    print('cleared output --> {}'.format(os.path.split(fname)[-1]))
+    
+    nbformat.write(nb, fname)
 
 def check_notebook(active_processes, max_processes=3):
     """ When there are as many or more processes activate than max_processes
@@ -152,6 +184,11 @@ def test_notebooks():
         if os.path.split(fname)[-1] not in _exclude_nb_list:
             active_processes = run_notebook(fname, active_processes)
             active_processes = check_notebook(active_processes)
+        if os.path.split(fname)[-1] not in _keep_output_list:
+            clear_output(fname)
+
+    
+    # wait for last process to finish
     for p in range(len(active_processes)):
         active_processes = check_notebook(active_processes, max_processes=0)
            
@@ -160,6 +197,8 @@ def test_notebooks():
         if os.path.split(fname)[-1] not in _exclude_nb_list:
             active_processes = run_notebook(fname, active_processes)
             active_processes = check_notebook(active_processes)
+        if os.path.split(fname)[-1] not in _keep_output_list:
+            clear_output(fname)
     for p in range(len(active_processes)):
         active_processes = check_notebook(active_processes, max_processes=0)
 
