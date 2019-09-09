@@ -8,15 +8,6 @@ from subprocess import Popen, PIPE
 import logging
 import nbformat
 
-try:
-    os.remove('tests.log')
-except FileNotFoundError:
-    pass
-except PermissionError:
-    pass
-
-logging.basicConfig(filename='tests.log',level=logging.DEBUG)
-
 #these notebooks are excluded because they contain errors on purpose
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     '02_strings_exercise.ipynb', '03_lists_exercise.ipynb',
@@ -53,8 +44,16 @@ _keep_output_list = ['02_py_exploratory_comp_4_sol.ipynb']
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
 sys.path.insert(0, PROJECT_DIR)
+os.chdir(TEST_DIR)
 
+try:
+    os.remove('tests.log')
+except FileNotFoundError:
+    pass
+except PermissionError:
+    pass
 
+logging.basicConfig(filename='tests.log',level=logging.DEBUG)
 
 def get_notebooks(exercise_nb_dir):
     """
@@ -186,7 +185,6 @@ def test_notebooks():
             active_processes = check_notebook(active_processes)
         if os.path.split(fname)[-1] not in _keep_output_list:
             clear_output(fname)
-
     
     # wait for last process to finish
     for p in range(len(active_processes)):
