@@ -1,0 +1,4 @@
+koe      656.0
+paard    450.0
+kip        3.8
+Name: gewicht, dtype: float64
