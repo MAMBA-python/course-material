@@ -29,7 +29,7 @@ ERROR:root:error message:
 [NbConvertApp] Executing notebook with kernel: python3
 [NbConvertApp] ERROR | Error while converting 'introduction_raster_IO.ipynb'
 Traceback (most recent call last):
-  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 408, in export_single_notebook
+  File "C:\Anaconda3\lib\site-packages\nbconvert\nbconvertapp.py", line 410, in export_single_notebook
     output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
   File "C:\Anaconda3\lib\site-packages\nbconvert\exporters\exporter.py", line 179, in from_filename
     return self.from_file(f, resources=resources, **kw)
@@ -43,11 +43,11 @@ Traceback (most recent call last):
     nbc, resc = preprocessor(nbc, resc)
   File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 47, in __call__
     return self.preprocess(nb, resources)
-  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 381, in preprocess
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 405, in preprocess
     nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
   File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\base.py", line 69, in preprocess
     nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
-  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 424, in preprocess_cell
+  File "C:\Anaconda3\lib\site-packages\nbconvert\preprocessors\execute.py", line 448, in preprocess_cell
     raise CellExecutionError.from_cell_and_msg(cell, out)
 nbconvert.preprocessors.execute.CellExecutionError: An error occurred while executing the following cell:
 ------------------
