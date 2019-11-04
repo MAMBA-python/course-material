@@ -1,0 +1,1 @@
+waitfor SomethingThatIsNeverHappening /t 15 2>NUL
