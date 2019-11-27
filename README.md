@@ -16,5 +16,5 @@ This repository consists for 90% of notebooks created by others. We are incredib
 - [Python for non-programmers, Berkeley University](https://github.com/BIDS/2016-01-14-berkeley)
 - [Jupyter Notebook Viewer](https://github.com/jupyter/nbviewer)
 - [The Zen of Python by Example, Hunter Blanks](https://github.com/hblanks/zen-of-python-by-example)
-- [Python-visualization with Folium]()https://github.com/python-visualization/folium)
+- [Python-visualization with Folium](https://github.com/python-visualization/folium)
 - [Python interactive plots with Bokeh](https://github.com/bokeh/bokeh-notebooks)
