@@ -10,6 +10,7 @@ import nbformat
 
 #these notebooks are excluded because they contain errors on purpose
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
+					'01_numbers_exercise.ipynb',
                     '02_strings_exercise.ipynb', '03_lists_exercise.ipynb',
                     '04_dictionaries_exercise.ipynb', '01_recap1_exercise.ipynb',
                     '01_data_inlezen_met_pandas_dutch.ipynb', 
@@ -124,11 +125,11 @@ def clear_output(fname):
             cell.outputs = []
         if hasattr(cell, "execution_count"):
             cell["execution_count"] = None
-    
+            
+    nbformat.write(nb, fname)
     print('cleared output --> {}'.format(os.path.split(fname)[-1]))
     
-    nbformat.write(nb, fname)
-
+    
 def check_notebook(active_processes, max_processes=3):
     """ When there are as many or more processes activate than max_processes
     this function will wait for the first process to finish. It then logs the
@@ -173,32 +174,42 @@ def test_notebooks():
     -------
     
     """
-
+    # run notebooks Basic 
     notebook_lst = get_notebooks(r'Exercise_notebooks/Basic')
     print('testing {} notebooks'.format(len(notebook_lst)))
     assert len(notebook_lst)!=0, 'No notebooks to be tested'
+    
     
     active_processes = []
     for fname in notebook_lst:
         if os.path.split(fname)[-1] not in _exclude_nb_list:
             active_processes = run_notebook(fname, active_processes)
             active_processes = check_notebook(active_processes)
-        if os.path.split(fname)[-1] not in _keep_output_list:
-            clear_output(fname)
-    
+
     # wait for last process to finish
     for p in range(len(active_processes)):
         active_processes = check_notebook(active_processes, max_processes=0)
-           
+    
+    # clear output
+    for fname in notebook_lst:
+        if os.path.split(fname)[-1] not in _keep_output_list:
+            clear_output(fname)
+    
+    # run notebooks On Topic       
     notebook_lst = get_notebooks(r'Exercise_notebooks/On_topic')
     for fname in notebook_lst:
         if os.path.split(fname)[-1] not in _exclude_nb_list:
             active_processes = run_notebook(fname, active_processes)
             active_processes = check_notebook(active_processes)
-        if os.path.split(fname)[-1] not in _keep_output_list:
-            clear_output(fname)
+            
+    # wait for last process to finish
     for p in range(len(active_processes)):
         active_processes = check_notebook(active_processes, max_processes=0)
+       
+    # clear output
+    for fname in notebook_lst:
+        if os.path.split(fname)[-1] not in _keep_output_list:
+            clear_output(fname)
 
 if __name__ == '__main__':
     test_notebooks()
