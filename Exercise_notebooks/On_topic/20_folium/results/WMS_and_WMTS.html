@@ -17,7 +17,7 @@
     
     <meta name="viewport" content="width=device-width,
         initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <style>#map_ffbc8d3563244d17be07021c74e8b2bb {
+    <style>#map_826673685bec4e4ea77ce7b8e0a473c0 {
         position: relative;
         width: 100.0%;
         height: 100.0%;
@@ -28,7 +28,7 @@
 </head>
 <body>    
     
-    <div class="folium-map" id="map_ffbc8d3563244d17be07021c74e8b2bb" ></div>
+    <div class="folium-map" id="map_826673685bec4e4ea77ce7b8e0a473c0" ></div>
 </body>
 <script>    
     
@@ -36,8 +36,8 @@
         var bounds = null;
     
 
-    var map_ffbc8d3563244d17be07021c74e8b2bb = L.map(
-        'map_ffbc8d3563244d17be07021c74e8b2bb', {
+    var map_826673685bec4e4ea77ce7b8e0a473c0 = L.map(
+        'map_826673685bec4e4ea77ce7b8e0a473c0', {
         center: [41, -70],
         zoom: 5,
         maxBounds: bounds,
@@ -49,7 +49,7 @@
 
 
     
-    var tile_layer_452d3c430a0b4dc9a99c39f13bfdfc5c = L.tileLayer(
+    var tile_layer_c2c99c06f50b40a2a160c63d580de24b = L.tileLayer(
         'http://{s}.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
         {
         "attribution": "google",
@@ -66,8 +66,8 @@
                 "mt3"
         ],
         "tms": false
-}).addTo(map_ffbc8d3563244d17be07021c74e8b2bb);
-    var tile_layer_7086deca5054403abbd5f085effecf7a = L.tileLayer(
+}).addTo(map_826673685bec4e4ea77ce7b8e0a473c0);
+    var tile_layer_f7e3edc6b6304ab5b5a342f5d9ca5f8d = L.tileLayer(
         'http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',
         {
         "attribution": "google",
@@ -84,9 +84,9 @@
                 "mt3"
         ],
         "tms": false
-}).addTo(map_ffbc8d3563244d17be07021c74e8b2bb);
+}).addTo(map_826673685bec4e4ea77ce7b8e0a473c0);
     
-            var macro_element_e1a9747bf4f440dfa8d9b93cd71f9570 = L.tileLayer.wms(
+            var macro_element_40671cb3b59943208344956943bad163 = L.tileLayer.wms(
                 'https://demo.boundlessgeo.com/geoserver/ows?',
                 {
   "attribution": "",
@@ -96,11 +96,11 @@
   "transparent": false,
   "version": "1.1.1"
 }
-                ).addTo(map_ffbc8d3563244d17be07021c74e8b2bb);
+                ).addTo(map_826673685bec4e4ea77ce7b8e0a473c0);
 
         
     
-            var macro_element_509449fa8a2d4061b54174a4290e3ef1 = L.tileLayer.wms(
+            var macro_element_b856508de83c437293165eb26f34e220 = L.tileLayer.wms(
                 'http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi',
                 {
   "attribution": "Weather data \u00a9 2012 IEM Nexrad",
@@ -110,23 +110,23 @@
   "transparent": true,
   "version": "1.1.1"
 }
-                ).addTo(map_ffbc8d3563244d17be07021c74e8b2bb);
+                ).addTo(map_826673685bec4e4ea77ce7b8e0a473c0);
 
         
     
-            var layer_control_26d8b2246cc9423ead51fa321cb36e8e = {
-                base_layers : { "google maps" : tile_layer_452d3c430a0b4dc9a99c39f13bfdfc5c,"google street view" : tile_layer_7086deca5054403abbd5f085effecf7a,"bluemarble" : macro_element_e1a9747bf4f440dfa8d9b93cd71f9570, },
-                overlays : { "test" : macro_element_509449fa8a2d4061b54174a4290e3ef1, }
+            var layer_control_b15bc74623fc4f57869436f7ff498bfe = {
+                base_layers : { "google maps" : tile_layer_c2c99c06f50b40a2a160c63d580de24b,"google street view" : tile_layer_f7e3edc6b6304ab5b5a342f5d9ca5f8d,"bluemarble" : macro_element_40671cb3b59943208344956943bad163, },
+                overlays : { "test" : macro_element_b856508de83c437293165eb26f34e220, }
                 };
             L.control.layers(
-                layer_control_26d8b2246cc9423ead51fa321cb36e8e.base_layers,
-                layer_control_26d8b2246cc9423ead51fa321cb36e8e.overlays,
+                layer_control_b15bc74623fc4f57869436f7ff498bfe.base_layers,
+                layer_control_b15bc74623fc4f57869436f7ff498bfe.overlays,
                 {position: 'topright',
                  collapsed: true,
                  autoZIndex: true
-                }).addTo(map_ffbc8d3563244d17be07021c74e8b2bb);
+                }).addTo(map_826673685bec4e4ea77ce7b8e0a473c0);
             
-                tile_layer_7086deca5054403abbd5f085effecf7a.remove();
-                macro_element_e1a9747bf4f440dfa8d9b93cd71f9570.remove();
+                tile_layer_f7e3edc6b6304ab5b5a342f5d9ca5f8d.remove();
+                macro_element_40671cb3b59943208344956943bad163.remove();
         
 </script>
