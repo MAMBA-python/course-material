@@ -165,7 +165,7 @@ def check_notebook(active_processes, max_processes=3):
 
     
 def test_notebooks():
-    """ Run all notebooks
+    """ Run all notebooks in the Basic and On_topic directory
     
     Parameters
     ----------
