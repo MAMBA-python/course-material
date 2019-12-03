@@ -109,9 +109,12 @@ Practical_examples/data_analysis/groundwater_model/model
 Practical_examples/modelling/groundwater_model/results/*	
 !Practical_examples/modelling/groundwater_model/results/.gitkeep
 Exercise_notebooks/On_topic/09_code_Quality/measurements*
-Exercise_notebooks/On_topic/19-bokeh/plot*
-Exercise_notebooks/On_topic/20-folium/results
+Exercise_notebooks/On_topic/19-bokeh/plot.svg
+Exercise_notebooks/On_topic/19-bokeh/plot.html
+Exercise_notebooks/On_topic/20-folium/results/*
 Exercise_notebooks/On_topic/08_databases/people.db
 Exercise_notebooks/On_topic/09_code_Quality/04_idiomatic/tmp.txt
+
 autotest/tests.log
+
 .vscode
