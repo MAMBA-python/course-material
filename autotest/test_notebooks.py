@@ -210,5 +210,5 @@ def test_notebooks():
         if os.path.split(fname)[-1] not in _keep_output_list:
             clear_output(fname)
 
-if __name__ == '__main__':
-    test_notebooks()
+#if __name__ == '__main__':
+#    test_notebooks()
