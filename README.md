@@ -6,7 +6,7 @@ The idea behind this course is that the best way to learn Python is by solving p
 - 'on-topic' is used for exercises on specific topics, that you should only use if the topic is useful for you.
 - 'personal_application' contains instructions to write a personal application. The template in this folder will be used during the Python course.
 
-Besides the exercises there are also some examples of Python code in the 'Practical_examples' directory. These are mostly examples that are shown during the Python courses.
+The repository also contains examples of Python code in the 'Practical_examples' directory. These are mostly examples that are shown during the Python courses.
 
 ## Acknowledgements
 This repository consists for 90% of notebooks created by others. We are incredibly grateful to the individuals, communities and firms that allow us to use their material. The repositories from which material is used are:
