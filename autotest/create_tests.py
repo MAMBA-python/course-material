@@ -41,6 +41,9 @@ _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     '04-loop.ipynb',
                     '01-debugging_exercise.ipynb',
                     '09 - Geographic Plots.ipynb',
+                    '10 - Exporting and Embedding.ipynb',
+                    'how to run executables in python.ipynb',
+                    'Webscraping-BeautifulSoup.ipynb',
                     ]
 
 _keep_output_list = ['02_py_exploratory_comp_4_sol.ipynb']

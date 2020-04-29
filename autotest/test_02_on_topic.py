@@ -298,12 +298,6 @@ def test_08___Graph_and_Network_Plots():
     fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]
     return tf.run_notebook(fdir, fname, clearoutput=True)
 
-def test_10___Exporting_and_Embedding():
-    fpath_rel = r"\19_bokeh\10 - Exporting and Embedding.ipynb"
-    fname = os.path.split(fpath_rel)[-1]
-    fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]
-    return tf.run_notebook(fdir, fname, clearoutput=True)
-
 def test_11___Running_Bokeh_Applications():
     fpath_rel = r"\19_bokeh\11 - Running Bokeh Applications.ipynb"
     fname = os.path.split(fpath_rel)[-1]
@@ -372,18 +366,6 @@ def test_Folium06_FloatImage():
 
 def test_Folium07_WMS_and_WMTS():
     fpath_rel = r"\20_folium\Folium07_WMS_and_WMTS.ipynb"
-    fname = os.path.split(fpath_rel)[-1]
-    fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]
-    return tf.run_notebook(fdir, fname, clearoutput=True)
-
-def test_how_to_run_executables_in_python():
-    fpath_rel = r"\21_run_external_programs_from_cmd\how to run executables in python.ipynb"
-    fname = os.path.split(fpath_rel)[-1]
-    fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]
-    return tf.run_notebook(fdir, fname, clearoutput=True)
-
-def test_Webscraping_BeautifulSoup():
-    fpath_rel = r"\23_webscraping\Webscraping-BeautifulSoup.ipynb"
     fname = os.path.split(fpath_rel)[-1]
     fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]
     return tf.run_notebook(fdir, fname, clearoutput=True)
