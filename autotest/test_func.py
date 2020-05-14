@@ -11,7 +11,7 @@ import os
 from subprocess import Popen, PIPE
 import nbformat
 
-def run_notebook(fdir, fname, clearoutput=True, timeout=60):
+def run_notebook(fdir, fname, clearoutput=True, timeout=120):
     """ Run a single notebook and add the process to a list of active
     processes.
     

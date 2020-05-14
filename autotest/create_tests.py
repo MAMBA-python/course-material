@@ -118,6 +118,7 @@ def create_test_modules(nbdir, name):
         
         # write function
         with open(f'test_{name}.py', 'a') as f:
+            nb_path = nb_path.replace('\\','/')
             f.write(_create_test_func(nb_name, nb_path, clearoutput))
 
     
@@ -170,11 +171,11 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
     
     nb_func = f'\ndef test_{nb_name}():\n'\
               f'    fpath_rel = r"{nb_path}"\n'\
-              '    fname = os.path.split(fpath_rel)[-1]\n'\
-              '    fdir = PROJECT_DIR + os.path.split(fpath_rel)[0]\n'\
+              '    subdir, fname = os.path.split(fpath_rel)\n'\
+              '    fdir = os.path.join(PROJECT_DIR, os.path.join(*tuple(subdir.split("/"))))\n'\
               f'    return tf.run_notebook(fdir, fname, clearoutput={clearoutput})\n'
                   
     return nb_func
 
 create_test_modules(r'Exercise_notebooks\Basic',    '01_basic')
-create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
+#create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
