@@ -1,0 +1,30 @@
+#
+language: python
+
+os:
+  - linux
+
+branches:
+  only:
+    - master
+
+jobs:
+  include:
+    - python: 3.7
+      dist: xenial
+
+# Install dependencies
+install:
+  - pip install -r requirements.travis.txt
+  - pip install --upgrade pip
+  - pip install codecov
+  - pip install pytest-cov
+  - pip install pytest-xdist
+  - pip install codacy-coverage
+
+# command to run tests
+script:
+  - py.test ./autotest -n 3
+
+after_success:
+  - python-codacy-coverage -r coverage.xml
