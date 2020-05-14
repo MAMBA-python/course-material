@@ -3,7 +3,7 @@ import sys
 import test_func as tf
 
 #make projectdir accessible inside this script
-nb_dir = r"Exercise_notebooks\Basic"
+nb_dir = r"Exercise_notebooks/Basic"
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir, nb_dir))
 sys.path.insert(0, PROJECT_DIR)
