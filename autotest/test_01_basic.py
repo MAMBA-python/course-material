@@ -3,7 +3,7 @@ import sys
 import test_func as tf
 
 #make projectdir accessible inside this script
-nb_dir = ["exercise_notebooks", "basic"]
+nb_dir = ["Exercise_notebooks", "Basic"]
 
 
 
