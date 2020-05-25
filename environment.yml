@@ -1,0 +1,10 @@
+dependencies:
+  - numpy
+  - pip
+  - pip:
+    - pandas
+    - matplotlib
+    - pandas
+    - lxml
+    - requests
+    - zeep
