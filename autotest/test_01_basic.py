@@ -11,7 +11,7 @@ sys.path.insert(0, PROJECT_DIR)
 
 
 def test_Notebook_Basics():
-    fpath_rel = r"/basic1_use_jupyter/sources/notebook Basics.ipynb"
+    fpath_rel = r"/basic1_use_jupyter/sources/Notebook Basics.ipynb"
     subdir, fname = os.path.split(fpath_rel)
     fdir = os.path.join(PROJECT_DIR, os.path.join(*tuple(subdir.split("/"))))
     return tf.run_notebook(fdir, fname, clearoutput=True)
