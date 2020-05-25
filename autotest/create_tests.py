@@ -172,8 +172,13 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
               '    fdir = os.path.join(*nb_dir, *subdir)\n'\
               '    cwd = os.getcwd()\n'\
               '    os.chdir(fdir)\n'\
-              '    tf.run_notebook(fname, clearoutput=True)\n'\
-              '    os.chdir(cwd)\n'\
+              '    try:\n'\
+              '        out = tf.run_notebook(fname, clearoutput=True)\n'\
+              '        os.chdir(cwd)\n'\
+              '    except Exception as e:\n'\
+              '        os.chdir(cwd)\n'\
+              '        raise(e)\n'\
+              '    assert out == 0\n'\
               f'    return 1\n'
                   
     return nb_func

@@ -98,12 +98,12 @@ def run_notebook(fname, clearoutput=True, timeout=120):
     
     cmd_args = f'jupyter nbconvert --ExecutePreprocessor.timeout={timeout} --to notebook --execute "{fname}" --output "{fname}"'
     
-    assert os.system(cmd_args)==0
+    out = os.system(cmd_args)
     
     if clearoutput:
         clear_output(fname)
     
-    return 0
+    return out
 
 def clear_output(fname):
     """ clear the output of a notebook. This should be done to reduce size

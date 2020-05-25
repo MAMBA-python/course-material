@@ -12,8 +12,13 @@ def test_Notebook_Basics():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_Running_code():
@@ -23,8 +28,13 @@ def test_Running_code():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_py_exploratory_comp_2():
@@ -34,19 +44,13 @@ def test_py_exploratory_comp_2():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
-    return 1
-
-def test_Untitled():
-    fpath_rel = ['basic2_basics_plotting', 'Untitled.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_py_exploratory_comp_3():
@@ -56,8 +60,13 @@ def test_py_exploratory_comp_3():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_Notebook_Basics_():
@@ -67,8 +76,13 @@ def test_Notebook_Basics_():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_Running_code_():
@@ -78,8 +92,13 @@ def test_Running_code_():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_01_numbers():
@@ -89,8 +108,13 @@ def test_01_numbers():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_02_strings():
@@ -100,8 +124,13 @@ def test_02_strings():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_03_lists():
@@ -111,8 +140,13 @@ def test_03_lists():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
 
 def test_04_dictionaries():
@@ -122,6 +156,11 @@ def test_04_dictionaries():
     fdir = os.path.join(*nb_dir, *subdir)
     cwd = os.getcwd()
     os.chdir(fdir)
-    tf.run_notebook(fname, clearoutput=True)
-    os.chdir(cwd)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
     return 1
