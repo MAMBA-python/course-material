@@ -2,6 +2,7 @@ numpy>=1.15
 scipy>=1.2
 matplotlib>=3.0
 pandas>=0.24
+jupyter>=1.0.0
 lxml
 requests
 zeep
