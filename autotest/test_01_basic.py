@@ -15,7 +15,7 @@ def test_Notebook_Basics():
     subdir, fname = os.path.split(fpath_rel)
     fdir = os.path.join(nb_dir, subdir)
     print(fdir)
-    pritn(nb_dir)
+    print(nb_dir)
     return tf.run_notebook(fdir, fname, clearoutput=True)
 
 def test_Running_code():
