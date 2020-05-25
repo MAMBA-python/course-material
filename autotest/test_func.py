@@ -96,10 +96,9 @@ def run_notebook(fname, clearoutput=True, timeout=120):
     
     print('running --> {}'.format(fname))
     
-    cmd_args = ['jupyter','nbconvert', '--ExecutePreprocessor.timeout={timeout}',
-                '--to notebook', '--execute "{fname}"', '--output "{fname}"']
-    p = Popen(cmd_args, stdout=PIPE, stderr=PIPE, encoding='utf8')
-    assert p.wait()==0
+    cmd_args = f'jupyter nbconvert --ExecutePreprocessor.timeout={timeout} --to notebook --execute "{fname}" --output "{fname}"'
+    
+    assert os.system(cmd_args)==0
     
     if clearoutput:
         clear_output(fname)
