@@ -18,7 +18,8 @@ def test_Notebook_Basics():
     print(os.listdir(os.getcwd()))
     print(os.listdir(fdir))
 
-
-    return tf.run_notebook(fdir, fname, clearoutput=True)
+    os.chdir(fdir)
+    
+    return tf.run_notebook(fname, clearoutput=True)
 
 
