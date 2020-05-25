@@ -12,6 +12,7 @@ def test_Notebook_Basics():
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
+    print(os.getcwd())
     print(fdir)
     print(nb_dir)
     return tf.run_notebook(fdir, fname, clearoutput=True)
