@@ -3,7 +3,7 @@ import sys
 import test_func as tf
 
 #make projectdir accessible inside this script
-nb_dir = r"Exercise_notebooks/Basic"
+nb_dir = r"exercise_notebooks/basic"
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir, nb_dir))
 sys.path.insert(0, PROJECT_DIR)
@@ -11,7 +11,7 @@ sys.path.insert(0, PROJECT_DIR)
 
 
 def test_Notebook_Basics():
-    fpath_rel = r"/basic1_use_jupyter/sources/Notebook Basics.ipynb"
+    fpath_rel = r"/basic1_use_jupyter/sources/notebook Basics.ipynb"
     subdir, fname = os.path.split(fpath_rel)
     fdir = os.path.join(PROJECT_DIR, os.path.join(*tuple(subdir.split("/"))))
     return tf.run_notebook(fdir, fname, clearoutput=True)
