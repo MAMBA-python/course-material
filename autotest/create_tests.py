@@ -118,7 +118,6 @@ def create_test_modules(nbdir, name):
         
         # write function
         with open(f'test_{name}.py', 'a') as f:
-            nb_path = nb_path.replace('\\','/')
             f.write(_create_test_func(nb_name, nb_path, clearoutput))
 
     
@@ -142,10 +141,7 @@ def _create_test_module_heading(nbdir):
               'import sys\n'\
               'import test_func as tf\n\n'\
               '#make projectdir accessible inside this script\n'\
-             f'nb_dir = r"{nbdir}"\n'\
-              'TEST_DIR = os.path.dirname(os.path.abspath(__file__))\n'\
-              'PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir, nb_dir))\n'\
-              'sys.path.insert(0, PROJECT_DIR)\n\n\n'
+               f'nb_dir = {os.path.split(nbdir)}\n'\
               
     return heading
 
@@ -170,12 +166,17 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
     """
     
     nb_func = f'\ndef test_{nb_name}():\n'\
-              f'    fpath_rel = r"{nb_path}"\n'\
-              '    subdir, fname = os.path.split(fpath_rel)\n'\
-              '    fdir = os.path.join(PROJECT_DIR, os.path.join(*tuple(subdir.split("/"))))\n'\
-              f'    return tf.run_notebook(fdir, fname, clearoutput={clearoutput})\n'
+              f'    fpath_rel = {nb_path.split(os.sep)[1:]}\n'\
+              '    subdir = fpath_rel[:-1]\n'\
+              '    fname = fpath_rel[-1]\n'\
+              '    fdir = os.path.join(*nb_dir, *subdir)\n'\
+              '    cwd = os.getcwd()\n'\
+              '    os.chdir(fdir)\n'\
+              '    tf.run_notebook(fname, clearoutput=True)\n'\
+              '    os.chdir(cwd)\n'\
+              f'    return 1\n'
                   
     return nb_func
 
 create_test_modules(r'Exercise_notebooks\Basic',    '01_basic')
-#create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
+create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
