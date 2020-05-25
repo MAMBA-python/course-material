@@ -1,3 +1,6 @@
+.. image:: https://mybinder.org/badge_logo.svg
+ :target: https://mybinder.org/v2/gh/MAMBA-python/course-material.git/master
+
 # course-material
 This repository contains the material used in the Python Programming course given by MAMBA (www.mamba-python.nl). 
 
