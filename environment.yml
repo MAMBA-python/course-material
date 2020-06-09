@@ -4,7 +4,7 @@ dependencies:
   - pip:
     - pandas
     - matplotlib
-    - pandas
+    - geopandas
     - lxml
     - requests
     - zeep
