@@ -1,4 +1,4 @@
-The following files in this directory are obtained from:
+The following files in this directory are obtained from:<br>
 [BIDS/2016-01-14-berkeley](https://github.com/BIDS/2016-01-14-berkeley):
 - 01-numpy.ipynb
 
