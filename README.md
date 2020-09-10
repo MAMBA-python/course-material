@@ -4,7 +4,7 @@
 # course-material
 This repository contains the material used in the Python programming course given by MAMBA (www.mamba-python.nl). 
 
-The idea behind this course is that the best way to learn Python is by solving practical problems. A good way to do this is by doing exercises in Jupyter Notebooks. The exercises are located in the 'Exercise_notebooks' directory. Within this directory the following sub directories are distinguished:
+The philosophy behind this course is that the best way to learn Python is by solving practical problems. A good way to do this is by doing exercises in Jupyter Notebooks. The exercises are located in the 'Exercise_notebooks' directory. In this directory the following sub directories are distinguished:
 - **basic** is used for the most basic material that everyone learning Python should know.
 - **on-topic** is used for exercises on specific topics, that you should only use if the topic is useful for you.
 - **personal_application** contains instructions to write a personal application. The template in this folder will be used during the Python course.
