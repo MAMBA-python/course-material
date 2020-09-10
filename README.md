@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.com/MAMBA-python/course-material.svg?branch=master)](https://travis-ci.com/MAMBA-python/course-material) 
 
 # course-material
-This repository contains the material used in the Python Programming course given by MAMBA (www.mamba-python.nl). 
+This repository contains the material used in the Python programming course given by MAMBA (www.mamba-python.nl). 
 
 The idea behind this course is that the best way to learn Python is by solving practical problems. A good way to do this is by doing exercises in Jupyter Notebooks. The exercises are located in the 'Exercise_notebooks' directory. Within this directory the following sub directories are distinguished:
 - **basic** is used for the most basic material that everyone learning Python should know.
