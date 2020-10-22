@@ -37,6 +37,7 @@ def test_03_pandas_methods_vs_functions():
     assert out == 0
     return 1
 
+
 def test_01_matplotlib():
     fpath_rel = ['02_matplotlib', '01_matplotlib.ipynb']
     subdir = fpath_rel[:-1]
@@ -69,8 +70,56 @@ def test_02_py_exploratory_comp_1():
     assert out == 0
     return 1
 
+def test_01_for_loops_basic():
+    fpath_rel = ['03_for_loops', '01_for-loops_basic.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_02_for_loops():
+    fpath_rel = ['03_for_loops', '02_for_loops.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_01_conditionals():
+    fpath_rel = ['04_if_statements', '01_conditionals.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
 def test_01_numpy():
-    fpath_rel = ['03_Numpy', '01-numpy.ipynb']
+    fpath_rel = ['05_Numpy', '01-numpy.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -86,7 +135,7 @@ def test_01_numpy():
     return 1
 
 def test_02_linear_equations_mb6():
-    fpath_rel = ['03_Numpy', '02-linear_equations_mb6.ipynb']
+    fpath_rel = ['05_Numpy', '02-linear_equations_mb6.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -102,7 +151,7 @@ def test_02_linear_equations_mb6():
     return 1
 
 def test_01_functions():
-    fpath_rel = ['04_Functions', '01_functions.ipynb']
+    fpath_rel = ['06_Functions', '01_functions.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -118,7 +167,7 @@ def test_01_functions():
     return 1
 
 def test_00___theorievoorbeeld():
-    fpath_rel = ['05_Object_oriented', '00 - theorievoorbeeld.ipynb']
+    fpath_rel = ['07_Object_oriented', '00 - theorievoorbeeld.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -134,7 +183,7 @@ def test_00___theorievoorbeeld():
     return 1
 
 def test_01_py_exploratory_comp_12_sol():
-    fpath_rel = ['05_Object_oriented', '01_py_exploratory_comp_12_sol.ipynb']
+    fpath_rel = ['07_Object_oriented', '01_py_exploratory_comp_12_sol.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -150,7 +199,7 @@ def test_01_py_exploratory_comp_12_sol():
     return 1
 
 def test_02_classes():
-    fpath_rel = ['05_Object_oriented', '02_classes.ipynb']
+    fpath_rel = ['07_Object_oriented', '02_classes.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -166,7 +215,7 @@ def test_02_classes():
     return 1
 
 def test_Geopandas():
-    fpath_rel = ['06_GIS', 'Geopandas.ipynb']
+    fpath_rel = ['08_GIS', 'Geopandas.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -182,7 +231,7 @@ def test_Geopandas():
     return 1
 
 def test_GIS_pyshp():
-    fpath_rel = ['06_GIS', 'GIS_pyshp.ipynb']
+    fpath_rel = ['08_GIS', 'GIS_pyshp.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -198,55 +247,7 @@ def test_GIS_pyshp():
     return 1
 
 def test_introduction_raster_IO():
-    fpath_rel = ['06_GIS', 'introduction_raster_IO.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_01_file_io():
-    fpath_rel = ['07_read_write_text_files', '01_file_io.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_03_files():
-    fpath_rel = ['07_read_write_text_files', '03-files.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_02_IntroSQLJoins():
-    fpath_rel = ['08_Databases', '02-IntroSQLJoins.ipynb']
+    fpath_rel = ['08_GIS', 'introduction_raster_IO.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -437,8 +438,57 @@ def test_02_strings():
     assert out == 0
     return 1
 
-def test_02_exceptions():
-    fpath_rel = ['11_Errors', '02_exceptions.ipynb']
+
+def test_02_file_io():
+    fpath_rel = ['11_read_write_text_files', '02_file_io.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_03_files():
+    fpath_rel = ['11_read_write_text_files', '03-files.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_05_input_output():
+    fpath_rel = ['11_read_write_text_files', '05-input-output.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_02_IntroSQLJoins():
+    fpath_rel = ['12_Databases', '02-IntroSQLJoins.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -454,7 +504,7 @@ def test_02_exceptions():
     return 1
 
 def test_scipy_optimize_mb5():
-    fpath_rel = ['12_Optimize', 'scipy_optimize_mb5.ipynb']
+    fpath_rel = ['13_scipy_optimize', 'scipy_optimize_mb5.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -470,7 +520,7 @@ def test_scipy_optimize_mb5():
     return 1
 
 def test_scipy_optimize_mb5_sol():
-    fpath_rel = ['12_Optimize', 'scipy_optimize_mb5_sol.ipynb']
+    fpath_rel = ['13_scipy_optimize', 'scipy_optimize_mb5_sol.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -485,24 +535,8 @@ def test_scipy_optimize_mb5_sol():
     assert out == 0
     return 1
 
-def test_01_testing():
-    fpath_rel = ['13_testing', '01-testing.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_02_testing2():
-    fpath_rel = ['13_testing', '02-testing2.ipynb']
+def test_02_exceptions():
+    fpath_rel = ['14_Errors', '02_exceptions.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -518,39 +552,7 @@ def test_02_testing2():
     return 1
 
 def test_01_datetime():
-    fpath_rel = ['14_datetime', '01_datetime.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_01_conditionals():
-    fpath_rel = ['15_loops_and_statements', '01_conditionals.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_03_for_loops():
-    fpath_rel = ['15_loops_and_statements', '03_for_loops.ipynb']
+    fpath_rel = ['15_datetime', '01_datetime.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -1015,6 +1017,38 @@ def test_3_stressmodels():
 
 def test_4_pastas_project():
     fpath_rel = ['24_pastas', '4_pastas_project.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_01_testing():
+    fpath_rel = ['25_testing', '01-testing.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_02_testing2():
+    fpath_rel = ['25_testing', '02-testing2.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
