@@ -286,7 +286,7 @@ def test_03_Quality_ZEN_of_Python():
     cwd = os.getcwd()
     os.chdir(fdir)
     try:
-        out = tf.run_notebook(fname, clearoutput=True)
+        out = tf.run_notebook(fname, clearoutput=False)
         os.chdir(cwd)
     except Exception as e:
         os.chdir(cwd)
