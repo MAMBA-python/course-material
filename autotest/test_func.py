@@ -96,7 +96,7 @@ def run_notebook(fname, clearoutput=True, timeout=120):
     
     print('running --> {}'.format(fname))
     
-    cmd_args = f'jupyter nbconvert --ExecutePreprocessor.timeout={timeout} --to notebook --execute "{fname}" --output "{fname}"'
+    cmd_args = f'jupyter nbconvert --ExecutePreprocessor.timeout={timeout} --to notebook --execute "{fname}" --output "{fname}" --ClearMetadataPreprocessor.enabled=True'
     
     out = os.system(cmd_args)
     
