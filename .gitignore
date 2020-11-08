@@ -106,7 +106,7 @@ venv.bak/
 
 # specifically for course_material
 **/_chat_df*
-Practical_examples/data_analysis/groundwater_model/model
+Practical_examples/groundwater_model/model
 Practical_examples/groundwater_model/results/*	
 !Practical_examples/groundwater_model/results/.gitkeep
 Exercise_notebooks/On_topic/01_Pandas/aangepaste_tabel.csv
