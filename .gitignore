@@ -106,6 +106,7 @@ venv.bak/
 
 # specifically for course_material
 **/_chat_df*
+Practical_examples/congress_twitter_analysis/data/*
 Practical_examples/groundwater_model/model
 Practical_examples/groundwater_model/results/*	
 !Practical_examples/groundwater_model/results/.gitkeep
