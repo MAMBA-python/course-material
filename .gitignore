@@ -109,9 +109,6 @@ venv.bak/
 Practical_examples/groundwater_model/model
 Practical_examples/groundwater_model/results/*	
 !Practical_examples/groundwater_model/results/.gitkeep
-Exercise_notebooks/On_topic/01_Pandas/aangepaste_tabel.csv
-Exercise_notebooks/On_topic/01_Pandas/statistiek.csv
-Exercise_notebooks/On_topic/01_Pandas/locaties*
 Exercise_notebooks/On_topic/09_code_Quality/measurements*
 Exercise_notebooks/On_topic/19-bokeh/plot.svg
 Exercise_notebooks/On_topic/19-bokeh/plot.html
@@ -119,14 +116,14 @@ Exercise_notebooks/On_topic/20-folium/results/*
 Exercise_notebooks/On_topic/23_webscraping/turnstile_*
 Exercise_notebooks/On_topic/24_pastas/data/background
 Exercise_notebooks/On_topic/24_pastas/pastas_project.pas
-Exercise_notebooks/On_topic/08_databases/people.db
+Exercise_notebooks/On_topic/12_databases/people.db
 Exercise_notebooks/On_topic/09_code_Quality/04_idiomatic/tmp.txt
-Exercise_notebooks/On_topic/06_GIS/shapefiles/Rotterdam_centraal*
-Exercise_notebooks/On_topic/07_read_write_text_files/my_diary.txt
-Exercise_notebooks/On_topic/07_read_write_text_files/my_diary_mod.txt
-Exercise_notebooks/On_topic/07_read_write_text_files/file2_mod.txt
-Exercise_notebooks/On_topic/07_read_write_text_files/dir_structure.pptx
-Exercise_notebooks/On_topic/07_read_write_text_files/~$dir_structure.pptx
+Exercise_notebooks/On_topic/08_GIS/shapefiles/Rotterdam_centraal*
+Exercise_notebooks/On_topic/09_read_write_text_files/my_diary.txt
+Exercise_notebooks/On_topic/09_read_write_text_files/my_diary_mod.txt
+Exercise_notebooks/On_topic/09_read_write_text_files/file2_mod.txt
+Exercise_notebooks/On_topic/09_read_write_text_files/dir_structure.pptx
+Exercise_notebooks/On_topic/09_read_write_text_files/~$dir_structure.pptx
 Exercise_notebooks/personal_application/readme.md
 
 
