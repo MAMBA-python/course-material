@@ -110,6 +110,8 @@ Practical_examples/congress_twitter_analysis/data/*
 Practical_examples/groundwater_model/model
 Practical_examples/groundwater_model/results/*	
 !Practical_examples/groundwater_model/results/.gitkeep
+Exercise_notebooks/On_topic/01_Pandas/aangepaste_tabel.csv
+Exercise_notebooks/On_topic/01_Pandas/statistiek.csv
 Exercise_notebooks/On_topic/09_code_Quality/measurements*
 Exercise_notebooks/On_topic/19-bokeh/plot.svg
 Exercise_notebooks/On_topic/19-bokeh/plot.html
