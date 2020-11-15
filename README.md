@@ -1,7 +1,7 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAMBA-python/course-material.git/master)
 [![Build Status](https://travis-ci.com/MAMBA-python/course-material.svg?branch=master)](https://travis-ci.com/MAMBA-python/course-material) 
 
-# course-material
+# Course-material
 This repository contains the material used in the Python programming course given by MAMBA (www.mamba-python.nl). 
 
 The philosophy behind this course is that the best way to learn Python is by solving practical problems. A good way to do this is by doing exercises in Jupyter Notebooks. The exercises are located in the 'Exercise_notebooks' directory. In this directory the following sub directories are distinguished:
