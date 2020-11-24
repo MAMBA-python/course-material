@@ -180,7 +180,7 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
               '        os.chdir(cwd)\n'\
               '        raise(e)\n'\
               '    assert out == 0\n'\
-              f'    return 1\n'
+              f'    return out\n'
                   
     return nb_func
 
