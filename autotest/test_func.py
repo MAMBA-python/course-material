@@ -116,6 +116,7 @@ def clear_output(fname):
     
     """
     nb = nbformat.read(fname, nbformat.NO_CONVERT)
+    nb['metadata'] = {}
     
     for cell in nb.cells:
         if hasattr(cell, "outputs"):
