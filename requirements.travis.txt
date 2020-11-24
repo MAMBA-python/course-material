@@ -16,3 +16,8 @@ folium
 bokeh
 pastas
 nbformat
+xlrd
+sqlalchemy
+rasterio
+networkx
+gpxpy
