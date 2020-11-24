@@ -25,6 +25,6 @@ install:
 # command to run tests
 script:
   - py.test ./autotest/test_01_basic.py -n 3
-
+  - py.test ./autotest/test_02_on_topic.py -n 3
 after_success:
   - python-codacy-coverage -r coverage.xml
