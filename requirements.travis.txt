@@ -19,5 +19,8 @@ nbformat
 xlrd
 sqlalchemy
 rasterio
+cartopy
+geographiclib
 networkx
 gpxpy
+pyshp
