@@ -4,17 +4,40 @@ language: python
 os:
   - linux
 
+env:
+    matrix:
+        - ENV_NAME="test-environment"
+          PYTHON_VERSION=3.7
+          PACKAGES="numpy scipy matplotlib pandas jupyter cython proj4=5.2.0"
+
 branches:
   only:
     - master
 
 jobs:
   include:
-    - python: 3.7
-      dist: xenial
+    - dist: xenial
 
 # Install dependencies
 install:
+  # Install miniconda
+  # -----------------
+  - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+ 
+
+  # Create the basic testing environment
+  # ------------------------------------
+  - conda config --add channels conda-forge
+
+  # Customise the testing environment
+  # ---------------------------------
+  - conda create -n $ENV_NAME python=$PYTHON_VERSION $PACKAGES
+  - source activate $ENV_NAME 
+  
+  # Install packages
+  # ----------------
   - pip install -r requirements.travis.txt
   - pip install --upgrade pip
   - pip install codecov
