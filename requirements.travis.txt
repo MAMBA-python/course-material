@@ -4,6 +4,7 @@ matplotlib>=3.0
 pandas>=0.24
 jupyter>=1.0.0
 cython>=0.28.5
+proj4>=5.2.0
 lxml
 requests
 zeep

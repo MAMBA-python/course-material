@@ -15,8 +15,6 @@ jobs:
 
 # Install dependencies
 install:
-  - apt-get install libproj-dev proj-data proj-bin  
-  - apt-get install libgeos-dev  
   - pip install -r requirements.travis.txt
   - pip install --upgrade pip
   - pip install codecov
