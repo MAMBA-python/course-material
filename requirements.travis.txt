@@ -10,7 +10,6 @@ branca
 folium
 bokeh
 pastas
-nbformat
 xlrd
 sqlalchemy
 rasterio
