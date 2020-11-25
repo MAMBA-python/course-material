@@ -35,7 +35,7 @@ install:
   # Customise the testing environment
   # ---------------------------------
   - conda create -n $ENV_NAME python=$PYTHON_VERSION $PACKAGES
-  - conda updaet ipython
+  - conda update ipython
   - source activate $ENV_NAME 
   
   # Install packages
