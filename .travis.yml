@@ -35,13 +35,13 @@ install:
   # Customise the testing environment
   # ---------------------------------
   - conda create -n $ENV_NAME python=$PYTHON_VERSION $PACKAGES
-  - conda install ipython
   - source activate $ENV_NAME 
   
   # Install packages
   # ----------------
   - pip install -r requirements.travis.txt
   - pip install --upgrade pip
+  - pip install ipython>=7.0.0
   - pip install codecov
   - pip install pytest-cov
   - pip install pytest-xdist
