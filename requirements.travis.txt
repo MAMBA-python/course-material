@@ -3,11 +3,13 @@ scipy>=1.2
 matplotlib>=3.0
 pandas>=0.24
 jupyter>=1.0.0
+cython>=0.28.5
 lxml
 requests
 zeep
 shapely
 pyproj
+proj
 geopandas
 tqdm
 flopy
@@ -19,7 +21,6 @@ nbformat
 xlrd
 sqlalchemy
 rasterio
-pyproj
 cartopy
 geographiclib
 networkx
