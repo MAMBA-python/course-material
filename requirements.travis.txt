@@ -10,6 +10,7 @@ zeep
 shapely
 pyproj
 proj
+proj4
 geopandas
 tqdm
 flopy
