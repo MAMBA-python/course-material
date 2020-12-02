@@ -41,7 +41,6 @@ install:
   # ----------------
   - pip install -r requirements.travis.txt
   - pip install --upgrade pip
-  - conda info ipython
   - pip install codecov
   - pip install pytest-cov
   - pip install pytest-xdist
