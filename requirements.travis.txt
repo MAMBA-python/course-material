@@ -16,6 +16,7 @@ rasterio
 cartopy
 descartes
 mplleaflet
+contextily
 geographiclib
 networkx
 gpxpy
