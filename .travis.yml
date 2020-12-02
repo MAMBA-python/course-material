@@ -8,7 +8,7 @@ env:
     matrix:
         - ENV_NAME="test-environment"
           PYTHON_VERSION=3.7
-          PACKAGES="numpy scipy matplotlib pandas jupyter cython proj4=5.2.0"
+          PACKAGES="ipython numpy scipy matplotlib pandas jupyter cython proj4=5.2.0"
 
 branches:
   only:
