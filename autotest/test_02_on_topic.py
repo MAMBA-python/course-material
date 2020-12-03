@@ -791,22 +791,6 @@ def test_11___Running_Bokeh_Applications():
     assert out == 0
     return 1
 
-def test_Folium01_and_mplleaflet():
-    fpath_rel = ['20_folium', 'Folium01_and_mplleaflet.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
 def test_Folium02_CheckZorder():
     fpath_rel = ['20_folium', 'Folium02_CheckZorder.ipynb']
     subdir = fpath_rel[:-1]
