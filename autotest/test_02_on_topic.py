@@ -567,24 +567,8 @@ def test_01_datetime():
     assert out == 0
     return 1
 
-def test_01_cmdline():
-    fpath_rel = ['16_creating_programs', '01-cmdline.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
 def test_01_debugging():
-    fpath_rel = ['17_debugging', '01-debugging.ipynb']
+    fpath_rel = ['16_debugging', '01-debugging.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -600,7 +584,7 @@ def test_01_debugging():
     return 1
 
 def test_02_debugging():
-    fpath_rel = ['17_debugging', '02-debugging.ipynb']
+    fpath_rel = ['16_debugging', '02-debugging.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -615,328 +599,8 @@ def test_02_debugging():
     assert out == 0
     return 1
 
-def test_01_modules_and_packages():
-    fpath_rel = ['18_modules_and_packages', '01_modules_and_packages.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_00___Introduction_and_Setup():
-    fpath_rel = ['19_bokeh', '00 - Introduction and Setup.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_01___Basic_Plotting():
-    fpath_rel = ['19_bokeh', '01 - Basic Plotting.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_02___Styling_and_Theming():
-    fpath_rel = ['19_bokeh', '02 - Styling and Theming.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_03___Data_Sources_and_Transformations():
-    fpath_rel = ['19_bokeh', '03 - Data Sources and Transformations.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_04___Adding_Annotations():
-    fpath_rel = ['19_bokeh', '04 - Adding Annotations.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_05___Presentation_Layouts():
-    fpath_rel = ['19_bokeh', '05 - Presentation Layouts.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_06___Linking_and_Interactions():
-    fpath_rel = ['19_bokeh', '06 - Linking and Interactions.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_07___Bar_and_Categorical_Data_Plots():
-    fpath_rel = ['19_bokeh', '07 - Bar and Categorical Data Plots.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_08___Graph_and_Network_Plots():
-    fpath_rel = ['19_bokeh', '08 - Graph and Network Plots.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_11___Running_Bokeh_Applications():
-    fpath_rel = ['19_bokeh', '11 - Running Bokeh Applications.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium02_CheckZorder():
-    fpath_rel = ['20_folium', 'Folium02_CheckZorder.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium03_Colormaps():
-    fpath_rel = ['20_folium', 'Folium03_Colormaps.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium04_ContinuousWorld():
-    fpath_rel = ['20_folium', 'Folium04_ContinuousWorld.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium05_ControlScale():
-    fpath_rel = ['20_folium', 'Folium05_ControlScale.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium06_FloatImage():
-    fpath_rel = ['20_folium', 'Folium06_FloatImage.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_Folium07_WMS_and_WMTS():
-    fpath_rel = ['20_folium', 'Folium07_WMS_and_WMTS.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_1_basic_pastas_model():
-    fpath_rel = ['24_pastas', '1_basic_pastas_model.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_2_external_stresses():
-    fpath_rel = ['24_pastas', '2_external_stresses.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_3_stressmodels():
-    fpath_rel = ['24_pastas', '3_stressmodels.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
-def test_4_pastas_project():
-    fpath_rel = ['24_pastas', '4_pastas_project.ipynb']
+def test_Webscraping_BeautifulSoup():
+    fpath_rel = ['17_webscraping', 'Webscraping-BeautifulSoup.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -952,7 +616,7 @@ def test_4_pastas_project():
     return 1
 
 def test_01_testing():
-    fpath_rel = ['25_testing', '01-testing.ipynb']
+    fpath_rel = ['18_testing', '01-testing.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -968,7 +632,7 @@ def test_01_testing():
     return 1
 
 def test_02_testing2():
-    fpath_rel = ['25_testing', '02-testing2.ipynb']
+    fpath_rel = ['18_testing', '02-testing2.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -982,3 +646,69 @@ def test_02_testing2():
         raise(e)
     assert out == 0
     return 1
+
+
+def test_1_basic_pastas_model():
+    fpath_rel = ['19_pastas', '1_basic_pastas_model.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_2_external_stresses():
+    fpath_rel = ['19_pastas', '2_external_stresses.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_3_stressmodels():
+    fpath_rel = ['19_pastas', '3_stressmodels.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
+def test_4_pastas_project():
+    fpath_rel = ['19_pastas', '4_pastas_project.ipynb']
+    subdir = fpath_rel[:-1]
+    fname = fpath_rel[-1]
+    fdir = os.path.join(*nb_dir, *subdir)
+    cwd = os.getcwd()
+    os.chdir(fdir)
+    try:
+        out = tf.run_notebook(fname, clearoutput=True)
+        os.chdir(cwd)
+    except Exception as e:
+        os.chdir(cwd)
+        raise(e)
+    assert out == 0
+    return 1
+
