@@ -184,5 +184,6 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
                   
     return nb_func
 
-create_test_modules(r'Exercise_notebooks\Basic',    '01_basic')
-create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
+# create_test_modules(r'Exercise_notebooks\Basic',    '01_basic')
+# create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
+# create_test_modules(r'practical_examples', '03_practical_examples')
