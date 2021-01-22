@@ -13,6 +13,7 @@ import logging
 import nbformat
 
 
+
 #these notebooks are excluded because they contain errors on purpose
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
 					'01_numbers_exercise.ipynb',
@@ -45,6 +46,7 @@ _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
                     '10 - Exporting and Embedding.ipynb',
                     'how to run executables in python.ipynb',
                     'Webscraping-BeautifulSoup.ipynb',
+                    'example_notebook_pylizard.ipynb'
                     ]
 
 _keep_output_list = ['02_py_exploratory_comp_4_sol.ipynb']
@@ -97,6 +99,15 @@ def create_test_modules(nbdir, name):
 
     """
     
+    if os.path.exists(f'test_{name}.py'):
+        ans = input(f'test file already exist, overwrite test_{name}.py? [y/n]')
+        if ans.lower() == 'y':
+            print(f'overwriting test_{name}.py')
+        else:
+            print('abort')
+            return None
+        
+        
     notebook_lst = get_notebooks(nbdir)
     
     with open(f'test_{name}.py', 'w') as f:
@@ -186,4 +197,5 @@ def _create_test_func(nb_name, nb_path, clearoutput=True):
 
 # create_test_modules(r'Exercise_notebooks\Basic',    '01_basic')
 # create_test_modules(r'Exercise_notebooks\On_topic', '02_on_topic')
-# create_test_modules(r'practical_examples', '03_practical_examples')
+create_test_modules(r'practical_examples', '03_practical_examples')
+

@@ -599,22 +599,6 @@ def test_02_debugging():
     assert out == 0
     return 1
 
-def test_Webscraping_BeautifulSoup():
-    fpath_rel = ['17_webscraping', 'Webscraping-BeautifulSoup.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
 def test_01_testing():
     fpath_rel = ['18_testing', '01-testing.ipynb']
     subdir = fpath_rel[:-1]

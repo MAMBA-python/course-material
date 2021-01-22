@@ -21,8 +21,8 @@ def test_AHN_downloader():
     assert out == 0
     return out
 
-def test_Presentatie_samen_programmeren_done():
-    fpath_rel = ['01_GIS', '04_Delfland_waterways', 'Delfland_waterways.ipynb']
+def test_Delfland_waterways():
+    fpath_rel = ['01_GIS', '02_Delfland_waterways', 'Delfland_waterways.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -38,7 +38,7 @@ def test_Presentatie_samen_programmeren_done():
     return out
 
 def test_wms_plot():
-    fpath_rel = ['01_GIS', 'plot_wms_data', 'wms_plot.ipynb']
+    fpath_rel = ['01_GIS', '03_plot_wms_data', 'wms_plot.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -54,7 +54,7 @@ def test_wms_plot():
     return out
 
 def test_geboortes_nl():
-    fpath_rel = ['02_data_analysis', '02_cbs_data', 'geboortes_nl.ipynb']
+    fpath_rel = ['02_data_analysis', '01_cbs_data', 'geboortes_nl.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -70,7 +70,7 @@ def test_geboortes_nl():
     return out
 
 def test_CO2_emissions_map():
-    fpath_rel = ['02_data_analysis', '03_CO2_emissions', 'CO2_emissions_map.ipynb']
+    fpath_rel = ['02_data_analysis', '02_CO2_emissions', 'CO2_emissions_map.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -86,7 +86,7 @@ def test_CO2_emissions_map():
     return out
 
 def test_congress_twitter_analysis():
-    fpath_rel = ['02_data_analysis', '05_congress_twitter_analysis', 'congress_twitter_analysis.ipynb']
+    fpath_rel = ['02_data_analysis', '03_congress_twitter_analysis', 'congress_twitter_analysis.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -391,22 +391,6 @@ def test_Parallel_processing():
 
 def test_groundwater_model():
     fpath_rel = ['05_flopy_groundwater_model', 'groundwater_model.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return out
-
-def test_example_notebook_pylizard():
-    fpath_rel = ['05_pylizard', 'example_notebook_pylizard.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
