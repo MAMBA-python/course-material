@@ -11,6 +11,7 @@ folium
 bokeh
 pastas
 xlrd
+openpyxl
 sqlalchemy
 rasterio
 cartopy
