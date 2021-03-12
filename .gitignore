@@ -128,7 +128,13 @@ Exercise_notebooks/On_topic/11_read_write_text_files/my_diary_mod.txt
 Exercise_notebooks/On_topic/11_read_write_text_files/file2_mod.txt
 Exercise_notebooks/On_topic/11_read_write_text_files/dir_structure.pptx
 Exercise_notebooks/On_topic/11_read_write_text_files/~$dir_structure.pptx
+Exercise_notebooks/On_topic/21_logging/example.log
+Exercise_notebooks/On_topic/21_logging/mijn_log.txt
+Exercise_notebooks/On_topic/21_logging/simple_func.txt
 Exercise_notebooks/In_practice/readme.md
 Exercise_notebooks/Intermediate/01_pandas/aangepaste_tabel.csv
 Exercise_notebooks/Intermediate/01_pandas/statistiek.csv
+Exercise_notebooks/Intermediate/05_logging/example.log
+Exercise_notebooks/Intermediate/05_logging/mijn_log.txt
+Exercise_notebooks/Intermediate/05_logging/simple_func.txt
 .vscode
