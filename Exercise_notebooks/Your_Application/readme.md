@@ -1,0 +1,1 @@
+this folder contains my personal application. In the Jupyter Notebook'eigen_toepassing' you can find more information.
