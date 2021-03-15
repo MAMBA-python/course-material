@@ -5,8 +5,8 @@ import test_func as tf
 #make projectdir accessible inside this script
 nb_dir = ('Exercise_notebooks', 'On_topic')
 
-def test_02_py_exploratory_comp_8():
-    fpath_rel = ['01_Pandas', '02_py_exploratory_comp_8.ipynb']
+def test_04_py_exploratory_comp_8():
+    fpath_rel = ['01_Pandas', '04_py_exploratory_comp_8.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -151,7 +151,7 @@ def test_02_linear_equations_mb6():
     return 1
 
 def test_01_functions():
-    fpath_rel = ['06_Functions', '01_functions.ipynb']
+    fpath_rel = ['06_Functions', '01_py_exploratory_comp_4.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -167,7 +167,7 @@ def test_01_functions():
     return 1
 
 def test_00___theorievoorbeeld():
-    fpath_rel = ['07_Object_oriented', '00 - theorievoorbeeld.ipynb']
+    fpath_rel = ['07_Object_oriented', '03 - theorievoorbeeld.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -536,7 +536,7 @@ def test_scipy_optimize_mb5_sol():
     return 1
 
 def test_02_exceptions():
-    fpath_rel = ['14_Errors', '02_exceptions.ipynb']
+    fpath_rel = ['14_warnings_and_errors', '05_exceptions.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -600,7 +600,7 @@ def test_02_debugging():
     return 1
 
 def test_01_testing():
-    fpath_rel = ['18_testing', '01-testing.ipynb']
+    fpath_rel = ['18_testing', '02-testing2.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
@@ -616,7 +616,7 @@ def test_01_testing():
     return 1
 
 def test_02_testing2():
-    fpath_rel = ['18_testing', '02-testing2.ipynb']
+    fpath_rel = ['18_testing', '03-testing3.ipynb']
     subdir = fpath_rel[:-1]
     fname = fpath_rel[-1]
     fdir = os.path.join(*nb_dir, *subdir)
