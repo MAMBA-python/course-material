@@ -679,20 +679,3 @@ def test_3_stressmodels():
         raise(e)
     assert out == 0
     return 1
-
-def test_4_pastas_project():
-    fpath_rel = ['19_pastas', '4_pastas_project.ipynb']
-    subdir = fpath_rel[:-1]
-    fname = fpath_rel[-1]
-    fdir = os.path.join(*nb_dir, *subdir)
-    cwd = os.getcwd()
-    os.chdir(fdir)
-    try:
-        out = tf.run_notebook(fname, clearoutput=True)
-        os.chdir(cwd)
-    except Exception as e:
-        os.chdir(cwd)
-        raise(e)
-    assert out == 0
-    return 1
-
