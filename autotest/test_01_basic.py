@@ -1,9 +1,8 @@
 import os
-import sys
 import test_func as tf
 
 #make projectdir accessible inside this script
-nb_dir = ('Exercise_notebooks', 'Basic')
+nb_dir = ('..', 'Exercise_notebooks', 'Basic')
 
 def test_Notebook_Basics():
     fpath_rel = ['basic1_use_jupyter', 'sources', 'Notebook Basics.ipynb']
