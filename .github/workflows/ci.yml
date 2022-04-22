@@ -33,6 +33,7 @@ jobs:
           pip install codecov
           pip install pytest-cov
           pip install pytest-dependency
+          pip install nbformat 
       - name: Run pytest
         run: |
           pytest
