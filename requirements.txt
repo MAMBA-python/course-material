@@ -14,8 +14,6 @@ xlrd
 openpyxl
 sqlalchemy
 rasterio
-geos
-cartopy
 descartes
 mplleaflet
 contextily
