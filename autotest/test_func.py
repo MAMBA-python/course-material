@@ -9,9 +9,8 @@ Created on Wed Apr 29 13:18:44 2020
 # Remove the temp directory and then create a fresh one
 import os
 import sys
-
-from subprocess import Popen, PIPE
 import nbformat
+from nbconvert.preprocessors import ExecutePreprocessor
 
 #these notebooks are excluded because they contain errors on purpose
 _exclude_nb_list = ['use_Jupyter.ipynb','py_exploratory_comp_4.ipynb',
@@ -73,7 +72,7 @@ def get_notebooks(exercise_nb_dir):
     
     return notebook_list
 
-def run_notebook(fname, clearoutput=True, timeout=120):
+def run_notebook(fname, clearoutput=False, timeout=120):
     """ Run a single notebook and add the process to a list of active
     processes.
     
@@ -88,17 +87,14 @@ def run_notebook(fname, clearoutput=True, timeout=120):
     timeout : int, optional
         if it takes more seconds than this to run a cell an error is raised.
         
-    Returns
-    -------
-    active_processes : list of SubprocessPopen
-        active processes where each process is running one jupyter notebook
     """
     
     print('running --> {}'.format(fname))
     
-    cmd_args = f'jupyter nbconvert --ExecutePreprocessor.timeout={timeout} --to notebook --execute "{fname}" --output "{fname}" --ClearMetadataPreprocessor.enabled=True'
-    
-    out = os.system(cmd_args)
+    with open(fname) as f:
+        nb = nbformat.read(f, as_version=4)
+    ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
+    out = ep.preprocess(nb, {"metadata": {"path": os.path.split(fname)[0]}})
     
     if clearoutput:
         clear_output(fname)
