@@ -34,6 +34,7 @@ jobs:
           pip install pytest-cov
           pip install pytest-dependency
           pip install nbformat 
+          pip install nbconvert
       - name: Run pytest
         run: |
           pytest
