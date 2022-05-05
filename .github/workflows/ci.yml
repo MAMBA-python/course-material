@@ -35,6 +35,7 @@ jobs:
           pip install pytest-dependency
           pip install nbformat 
           pip install nbconvert
+          pip install ipykernel
       - name: Run pytest
         run: |
           pytest
