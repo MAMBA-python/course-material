@@ -6,18 +6,6 @@ import test_func as tf
 tst_dir = os.path.dirname(os.path.realpath(__file__))
 nb_dir = os.path.join(tst_dir, "..", *('Exercise_notebooks', 'On_topic'))
 
-def test_01_pandas_basis_dutch():
-    fpath_rel = ['01_Pandas', '01_pandas_basis_dutch.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_02_exercise_whatsapp():
-    fpath_rel = ['01_Pandas', '02_exercise_whatsapp.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_03_pandas_methods_vs_functions():
     fpath_rel = ['01_Pandas', '03_pandas_methods_vs_functions.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
@@ -26,18 +14,6 @@ def test_03_pandas_methods_vs_functions():
 
 def test_04_py_exploratory_comp_8():
     fpath_rel = ['01_Pandas', '04_py_exploratory_comp_8.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_Untitled():
-    fpath_rel = ['01_Pandas', 'Untitled.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_whatsapp_data_analysis():
-    fpath_rel = ['01_Pandas', 'whatsapp_data_analysis.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
     return 0
@@ -66,18 +42,6 @@ def test_02_for_loops():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_02_for_loops_exercise():
-    fpath_rel = ['03_for_loops', '02_for_loops_exercise.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_03_loop():
-    fpath_rel = ['03_for_loops', '03-loop.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_01_conditionals():
     fpath_rel = ['04_if_statements', '01_conditionals.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
@@ -92,12 +56,6 @@ def test_01_numpy():
 
 def test_02_linear_equations_mb6():
     fpath_rel = ['05_Numpy', '02-linear_equations_mb6.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_01_py_exploratory_comp_4():
-    fpath_rel = ['06_Functions', '01_py_exploratory_comp_4.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
     return 0
