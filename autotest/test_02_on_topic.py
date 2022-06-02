@@ -204,32 +204,8 @@ def test_scipy_optimize_mb5_sol():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_01_warnings_dutch():
-    fpath_rel = ['14_warnings_and_errors', '01_warnings_dutch.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_02_errors_dutch():
-    fpath_rel = ['14_warnings_and_errors', '02_errors_dutch.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_04_errors():
-    fpath_rel = ['14_warnings_and_errors', '04-errors.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_05_exceptions():
     fpath_rel = ['14_warnings_and_errors', '05_exceptions.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_05_exceptions_exercise():
-    fpath_rel = ['14_warnings_and_errors', '05_exceptions_exercise.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
     return 0
@@ -266,12 +242,6 @@ def test_02_testing2():
 
 def test_03_testing3():
     fpath_rel = ['18_testing', '03-testing3.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_03_testing3_exercise():
-    fpath_rel = ['18_testing', '03-testing3_exercise.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
     return 0
