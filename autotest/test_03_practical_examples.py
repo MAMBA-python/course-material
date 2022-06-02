@@ -18,11 +18,11 @@ def test_Delfland_waterways():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_wms_plot():
-    fpath_rel = ['01_GIS', '03_plot_wms_data', 'wms_plot.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
+# def test_wms_plot():
+#     fpath_rel = ['01_GIS', '03_plot_wms_data', 'wms_plot.ipynb']
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
+#     return 0
 
 def test_geboortes_nl():
     fpath_rel = ['02_data_analysis', '01_cbs_data', 'geboortes_nl.ipynb']

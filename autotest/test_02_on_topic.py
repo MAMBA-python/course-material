@@ -96,11 +96,11 @@ def test_GIS_pyshp():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_introduction_raster_IO():
-    fpath_rel = ['08_GIS', 'introduction_raster_IO.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
+# def test_introduction_raster_IO():
+#     fpath_rel = ['08_GIS', 'introduction_raster_IO.ipynb']
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
+#     return 0
 
 def test_01_best_practices():
     fpath_rel = ['09_Code_Quality', '01_best_practices.ipynb']
