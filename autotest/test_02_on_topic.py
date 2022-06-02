@@ -66,18 +66,6 @@ def test_02_functions():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_02_functions_exercise():
-    fpath_rel = ['06_Functions', '02_functions_exercise.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_04_riddles_and_functions_group_exercises():
-    fpath_rel = ['06_Functions', '04-riddles_and_functions_group_exercises.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_01_py_exploratory_comp_12_sol():
     fpath_rel = ['07_Object_oriented', '01_py_exploratory_comp_12_sol.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
