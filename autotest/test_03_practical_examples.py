@@ -144,12 +144,6 @@ def test_Folium07_WMS_and_WMTS():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_groundwater_model():
-    fpath_rel = ['05_flopy_groundwater_model', 'groundwater_model.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_01_cmdline():
     fpath_rel = ['09_creating_programs', '01-cmdline.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
