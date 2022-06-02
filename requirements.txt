@@ -24,3 +24,4 @@ geographiclib
 networkx
 gpxpy
 pyshp
+textblob
