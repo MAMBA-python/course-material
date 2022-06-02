@@ -12,11 +12,11 @@ nb_dir = os.path.join(tst_dir, "..", *('', 'practical_examples'))
 #     tf.run_notebook(fname, clearoutput=False)
 #     return 0
 
-def test_Delfland_waterways():
-    fpath_rel = ['01_GIS', '02_Delfland_waterways', 'Delfland_waterways.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
+# def test_Delfland_waterways():
+#     fpath_rel = ['01_GIS', '02_Delfland_waterways', 'Delfland_waterways.ipynb']
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
+#     return 0
 
 # def test_wms_plot():
 #     fpath_rel = ['01_GIS', '03_plot_wms_data', 'wms_plot.ipynb']
