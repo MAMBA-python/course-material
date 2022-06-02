@@ -6,11 +6,11 @@ import test_func as tf
 tst_dir = os.path.dirname(os.path.realpath(__file__))
 nb_dir = os.path.join(tst_dir, "..", *('', 'practical_examples'))
 
-def test_AHN_downloader():
-    fpath_rel = ['01_GIS', '01_AHN_downloader', 'AHN downloader.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
+# def test_AHN_downloader():
+#     fpath_rel = ['01_GIS', '01_AHN_downloader', 'AHN downloader.ipynb']
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
+#     return 0
 
 def test_Delfland_waterways():
     fpath_rel = ['01_GIS', '02_Delfland_waterways', 'Delfland_waterways.ipynb']
