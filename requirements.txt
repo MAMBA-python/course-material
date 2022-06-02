@@ -10,6 +10,7 @@ branca
 folium
 bokeh
 pastas
+pastastore
 xlrd
 openpyxl
 sqlalchemy
