@@ -17,6 +17,7 @@ openpyxl
 sqlalchemy
 rasterio
 descartes
+cartopy
 mplleaflet
 contextily
 geographiclib
