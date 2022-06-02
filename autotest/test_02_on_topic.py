@@ -246,12 +246,6 @@ def test_03_testing3():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_04_defensive():
-    fpath_rel = ['18_testing', '04-defensive.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_1_basic_pastas_model():
     fpath_rel = ['19_pastas', '1_basic_pastas_model.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
@@ -276,26 +270,8 @@ def test_4_pastastore():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_4_pastas_project():
-    fpath_rel = ['19_pastas', '4_pastas_project.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_01_modules_and_packages_dutch():
-    fpath_rel = ['20_modules_and_packages', '01_modules_and_packages_dutch.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_02_modules_and_packages():
     fpath_rel = ['20_modules_and_packages', '02_modules_and_packages.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
-def test_01_logging_dutch():
-    fpath_rel = ['21_logging', '01_logging_dutch.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
     return 0
