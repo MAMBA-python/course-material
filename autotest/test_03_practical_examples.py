@@ -102,12 +102,6 @@ def test_11___Running_Bokeh_Applications():
     tf.run_notebook(fname, clearoutput=False)
     return 0
 
-def test_Folium01_and_mplleaflet():
-    fpath_rel = ['04_folium', 'Folium01_and_mplleaflet.ipynb']
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-    return 0
-
 def test_Folium02_CheckZorder():
     fpath_rel = ['04_folium', 'Folium02_CheckZorder.ipynb']
     fname = os.path.join(nb_dir, *fpath_rel)
