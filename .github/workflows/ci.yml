@@ -1,0 +1,41 @@
+name: course-material
+
+on:
+  # Trigger the workflow on push or pull request on master,
+  # and only on pull-requests on dev branch
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+      - dev
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        python-version: [3.7]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v3
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest
+          pip install fsspec>=0.3.3
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install codecov
+          pip install pytest-cov
+          pip install pytest-dependency
+          pip install nbformat 
+          pip install nbconvert
+          pip install ipykernel
+      - name: Run pytest
+        run: |
+          pytest

@@ -1,5 +1,5 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/MAMBA-python/course-material.git/master)
-[![Build Status](https://travis-ci.com/MAMBA-python/course-material.svg?branch=master)](https://travis-ci.com/MAMBA-python/course-material) 
+[![workflow](https://github.com/MAMBA-python/course-material/actions/workflows/course-material/badge.svg)](https://github.com/MAMBA-python/course-material/actions/workflows/ci.yml)
 
 # Course-material
 This repository contains the material used in the Python programming course given by MAMBA (www.mamba-python.nl). 
