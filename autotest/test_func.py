@@ -61,7 +61,7 @@ def get_notebooks(exercise_nb_dir):
     ----------
     exercise_nb_dir: str
         root folder with only notebooks that should be save without output
-  
+
     Returns
     -------
     notebook_list: list of str
