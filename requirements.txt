@@ -7,6 +7,7 @@ geopandas
 tqdm
 flopy
 branca
+mapclassify
 folium
 bokeh
 seaborn
@@ -24,4 +25,3 @@ networkx
 gpxpy
 pyshp
 textblob
-mapclassify
