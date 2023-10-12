@@ -251,25 +251,22 @@ def test_03_testing3():
     tf.run_notebook(fname, clearoutput=False)
 
 
-# # Does not work. Test turned off. Needs fixing.
-# def test_1_basic_pastas_model():
-#     fpath_rel = ['19_pastas', '1_basic_pastas_model.ipynb']
-#     fname = os.path.join(nb_dir, *fpath_rel)
-#     tf.run_notebook(fname, clearoutput=False)
+def test_1_basic_pastas_model():
+    fpath_rel = ['19_pastas', '1_basic_pastas_model.ipynb']
+    fname = os.path.join(nb_dir, *fpath_rel)
+    tf.run_notebook(fname, clearoutput=False)
 
 
-# # Does not work. Test turned off. Needs fixing.
-# def test_2_external_stresses():
-#     fpath_rel = ['19_pastas', '2_external_stresses.ipynb']
-#     fname = os.path.join(nb_dir, *fpath_rel)
-#     tf.run_notebook(fname, clearoutput=False)
+def test_2_external_stresses():
+    fpath_rel = ['19_pastas', '2_external_stresses.ipynb']
+    fname = os.path.join(nb_dir, *fpath_rel)
+    tf.run_notebook(fname, clearoutput=False)
 
 
-# # Does not work. Test turned off. Needs fixing.
-# def test_3_stressmodels():
-#     fpath_rel = ['19_pastas', '3_stressmodels.ipynb']
-#     fname = os.path.join(nb_dir, *fpath_rel)
-#     tf.run_notebook(fname, clearoutput=False)
+def test_3_stressmodels():
+    fpath_rel = ['19_pastas', '3_stressmodels.ipynb']
+    fname = os.path.join(nb_dir, *fpath_rel)
+    tf.run_notebook(fname, clearoutput=False)
 
 
 # # Does not work. Test turned off. Needs fixing.
