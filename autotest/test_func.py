@@ -100,7 +100,7 @@ def run_notebook(fname, clearoutput=False, timeout=120):
 
     print('running --> {}'.format(fname))
 
-    with open(fname) as f:
+    with open(fname, encoding='utf8') as f:
         nb = nbformat.read(f, as_version=4)
     ep = ExecutePreprocessor(timeout=600, kernel_name="python3")
     out = ep.preprocess(nb, {"metadata": {"path": os.path.split(fname)[0]}})

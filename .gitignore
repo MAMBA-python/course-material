@@ -138,3 +138,4 @@ Exercise_notebooks/Intermediate/05_logging/example.log
 Exercise_notebooks/Intermediate/05_logging/mijn_log.txt
 Exercise_notebooks/Intermediate/05_logging/simple_func.txt
 .vscode
+*.code-workspace
