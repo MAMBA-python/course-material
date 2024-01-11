@@ -26,3 +26,4 @@ gpxpy
 pyshp
 textblob
 cartopy
+nlmod
