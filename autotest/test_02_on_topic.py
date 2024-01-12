@@ -264,11 +264,10 @@ def test_3_stressmodels():
     tf.run_notebook(fname, clearoutput=False)
 
 
-# # Does not work. Test turned off. Needs fixing.
-# def test_4_pastastore():
-#     fpath_rel = ['19_pastas', '4_pastastore.ipynb']
-#     fname = os.path.join(nb_dir, *fpath_rel)
-#     tf.run_notebook(fname, clearoutput=False)
+def test_4_pastastore():
+    fpath_rel = ["19_pastas", "4_pastastore.ipynb"]
+    fname = os.path.join(nb_dir, *fpath_rel)
+    tf.run_notebook(fname, clearoutput=False)
 
 
 def test_02_modules_and_packages():
