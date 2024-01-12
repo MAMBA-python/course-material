@@ -7,7 +7,7 @@ nb_dir = os.path.join(tst_dir, "..", *("", "practical_examples"))
 
 
 def test_Delfland_waterways():
-    fpath_rel = ["01_GIS", "02_Delfland_waterways", "Delfland_waterways.ipynb"]
+    fpath_rel = ["01_GIS", "01_Delfland_waterways", "Delfland_waterways.ipynb"]
     fname = os.path.join(nb_dir, *fpath_rel)
     tf.run_notebook(fname, clearoutput=False)
 
