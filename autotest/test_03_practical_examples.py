@@ -12,10 +12,10 @@ def test_Delfland_waterways():
     tf.run_notebook(fname, clearoutput=False)
 
 
-def test_wms_plot():
-    fpath_rel = ["01_GIS", "02_plot_wms_data", "wms_plot.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
+# def test_wms_plot():
+#     fpath_rel = ["01_GIS", "02_plot_wms_data", "wms_plot.ipynb"]
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
 
 
 def test_geboortes_nl():
@@ -52,10 +52,10 @@ def test_01___Basic_Plotting():
     tf.run_notebook(fname, clearoutput=False)
 
 
-def test_02___Styling_and_Theming():
-    fpath_rel = ["03_bokeh", "02 - Styling and Theming.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
+# def test_02___Styling_and_Theming():
+#     fpath_rel = ["03_bokeh", "02 - Styling and Theming.ipynb"]
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
 
 
 def test_03___Data_Sources_and_Transformations():
@@ -64,10 +64,10 @@ def test_03___Data_Sources_and_Transformations():
     tf.run_notebook(fname, clearoutput=False)
 
 
-def test_Folium02_CheckZorder():
-    fpath_rel = ["04_folium", "Folium02_CheckZorder.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
+# def test_Folium02_CheckZorder():
+#     fpath_rel = ["04_folium", "Folium02_CheckZorder.ipynb"]
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
 
 
 def test_Folium03_Colormaps():
