@@ -11,7 +11,7 @@ mapclassify
 folium
 bokeh
 seaborn
-pastas
+pastas < 1.5
 pastastore
 xlrd
 openpyxl
