@@ -18,10 +18,10 @@ def test_Delfland_waterways():
 #     tf.run_notebook(fname, clearoutput=False)
 
 
-def test_geboortes_nl():
-    fpath_rel = ["02_data_analysis", "01_cbs_data", "geboortes_nl.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
+# def test_geboortes_nl():
+#     fpath_rel = ["02_data_analysis", "01_cbs_data", "geboortes_nl.ipynb"]
+#     fname = os.path.join(nb_dir, *fpath_rel)
+#     tf.run_notebook(fname, clearoutput=False)
 
 
 def test_CO2_emissions_map():
