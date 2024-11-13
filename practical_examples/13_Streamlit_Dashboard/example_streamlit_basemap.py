@@ -20,9 +20,15 @@ def app():
 
     row1_col1, row1_col2 = st.columns([3, 1])
 
-    with row1_col1:
-        empty = st.empty()
-        empty.image("https://i.imgur.com/Ec7qsR0.png")
+
+    # only do once 
+    if 'started' not in st.session_state:
+        st.session_state['started'] = True
+        # create example hurricane, only first run
+        with row1_col1:
+            empty = st.empty()
+            empty.image("https://i.imgur.com/Ec7qsR0.png")
+            st.session_state['fig'] = empty
 
     with row1_col2:
 
@@ -39,7 +45,7 @@ def app():
             storm = st.session_state['hurricane'].get_storm(selected)
             ax = storm.plot()
             fig = ax.get_figure()
-            empty.pyplot(fig)
+            st.session_state['fig'].pyplot(fig)
         else:
 
             name = st.text_input("Or enter a storm Name", "michael")
@@ -53,9 +59,9 @@ def app():
                     storm = basin.get_storm((name, year))
                     ax = storm.plot()
                     fig = ax.get_figure()
-                    empty.pyplot(fig)
+                    st.session_state['fig'].pyplot(fig)
                 else:
-                    empty.text("No storms found")
+                    st.session_state['fig'].text("No storms found")
                     st.write("No storms found")
                     
         
