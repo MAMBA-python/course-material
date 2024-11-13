@@ -27,3 +27,4 @@ pyshp
 textblob
 cartopy
 nlmod
+cbsodata
