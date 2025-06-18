@@ -9,8 +9,6 @@ flopy
 branca
 mapclassify
 folium
-bokeh
-bokeh_sampledata
 seaborn
 pastas > 1.8
 pastastore

@@ -109,8 +109,6 @@ venv.bak/
 Practical_examples/02_data_analysis/05_congress_twitter_analysis/data/*
 Practical_examples/05_flopy_groundwater_model/model
 Practical_examples/05_flopy_groundwater_model/results/*	
-Practical_examples/03_bokeh/plot.svg
-Practical_examples/03_bokeh/plot.html
 Practical_examples/04_folium/results/*
 Practical_examples/20-04_folium/results/*
 !Practical_examples/05_flopy_groundwater_model/results/.gitkeep

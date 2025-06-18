@@ -40,30 +40,6 @@ def test_congress_twitter_analysis():
     tf.run_notebook(fname, clearoutput=False)
 
 
-def test_00___Introduction_and_Setup():
-    fpath_rel = ["03_bokeh", "00 - Introduction and Setup.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-
-
-def test_01___Basic_Plotting():
-    fpath_rel = ["03_bokeh", "01 - Basic Plotting.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-
-
-# def test_02___Styling_and_Theming():
-#     fpath_rel = ["03_bokeh", "02 - Styling and Theming.ipynb"]
-#     fname = os.path.join(nb_dir, *fpath_rel)
-#     tf.run_notebook(fname, clearoutput=False)
-
-
-def test_03___Data_Sources_and_Transformations():
-    fpath_rel = ["03_bokeh", "03 - Data Sources and Transformations.ipynb"]
-    fname = os.path.join(nb_dir, *fpath_rel)
-    tf.run_notebook(fname, clearoutput=False)
-
-
 # def test_Folium02_CheckZorder():
 #     fpath_rel = ["04_folium", "Folium02_CheckZorder.ipynb"]
 #     fname = os.path.join(nb_dir, *fpath_rel)
