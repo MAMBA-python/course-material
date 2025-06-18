@@ -9,9 +9,8 @@ flopy
 branca
 mapclassify
 folium
-bokeh
 seaborn
-pastas < 1.5
+pastas > 1.8
 pastastore
 xlrd
 openpyxl
