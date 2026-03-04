@@ -4,6 +4,7 @@ zeep
 shapely
 pyproj
 geopandas
+hydropandas
 tqdm
 flopy
 branca
