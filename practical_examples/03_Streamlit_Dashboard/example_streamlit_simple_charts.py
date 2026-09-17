@@ -5,37 +5,28 @@ Created on Thu Apr 20 09:11:06 2023
 @author: Petra Izeboud
 """
 
-# %%
-
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import glob
 
+st.title("Interactieve grafieken")
 
-def create_bar_chart(df):
-    st.bar_chart(df)
+aantal = st.slider("Hoeveel maanden wil je zien?", 1, 12, 6)
 
 df = pd.DataFrame(
-            np.random.randn(10,4),
-            columns=['2011', '2012', '2013', '2014'])
+    np.random.randn(12, 2),
+    columns=["Temperatuur", "Neerslag"]
+)
 
-st.markdown(
-    """
-    # Show your dataframe
-    """)
-    
-st.area_chart(df)
-
-checkbox = st.checkbox("Show area chart", value=True)
-if checkbox:
-    st.write('clicked checkbox')
-    
-
-st.button('Create bar chart', on_click=create_bar_chart, args=(df, ))
+df = df.iloc[:aantal]
 
 
+col1, col2 = st.columns(2)
 
-# %%
+with col1:
+    st.subheader("Temperatuur")
+    st.line_chart(df["Temperatuur"])
 
+with col2:
+    st.subheader("Neerslag")
+    st.bar_chart(df["Neerslag"])
